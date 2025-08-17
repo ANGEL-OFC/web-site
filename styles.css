@@ -167,6 +167,16 @@ footer {
   }
 }
 
+
+/* Logo redondo */
+header .logo img {
+  width: 80px;          /* ajusta el tamaño según quieras */
+  height: 80px;         /* que sea igual al width para que quede círculo */
+  border-radius: 50%;   /* lo hace redondo */
+  object-fit: cover;    /* recorta y centra bien la imagen */
+}
+
+
 /* Footer igual que antes pero en blanco */
 footer {
   background: #ffffff;        /* Fondo blanco */
