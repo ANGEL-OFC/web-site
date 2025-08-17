@@ -100,13 +100,23 @@ nav a:hover, .nav a:hover {
   text-shadow: 0 1px 5px #000;
 }
 
-.hero .btn {
+hero .btn {
   background: #e74c3c; /* Rojo */
-  color: #fff;
+  color: fff;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px #1119;
+  transition: all 0.3s;
 }
 .hero .btn:hover {
   background: #f39c12; /* Naranja */
   color: #fff;
+  transform: translateY(-4px) scale(1.04);
 }
 
 /* SECCIONES */
