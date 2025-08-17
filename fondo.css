@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background: url("img/fondo.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+/* Logo redondo */
+.logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+main {
+  flex: 1;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+main h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+main p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+footer {
+  background: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 1px solid #ddd;
+}
+
+footer a {
+  text-decoration: none;
+  color: #000000;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  color: #007bff;
+}
