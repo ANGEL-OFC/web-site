@@ -166,3 +166,29 @@ footer {
     display: flex;
   }
 }
+
+/* Footer igual que antes pero en blanco */
+footer {
+  background: #ffffff;        /* Fondo blanco */
+  color: #000000;             /* Texto negro */
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 1px solid #ddd; /* Línea superior fina */
+  font-family: "Poppins", sans-serif;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #000000;             /* Enlaces negros */
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #0056b3;             /* Azul al pasar el mouse */
+}
