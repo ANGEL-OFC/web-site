@@ -99,23 +99,14 @@ nav a:hover, .nav a:hover {
   color: #eee;
   text-shadow: 0 1px 5px #000;
 }
+
 .hero .btn {
-  background: var(--color-boton);
-  color: var(--texto-principal);
-  padding: 14px 32px;
-  border: none;
-  border-radius: 30px;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1.1rem;
-  box-shadow: 0 2px 8px #1119;
-  transition: all 0.3s;
+  background: #e74c3c; /* Rojo */
+  color: #fff;
 }
 .hero .btn:hover {
-  background: var(--color-boton-hover);
-  color: #222;
-  transform: translateY(-4px) scale(1.04);
+  background: #f39c12; /* Naranja */
+  color: #fff;
 }
 
 /* SECCIONES */
