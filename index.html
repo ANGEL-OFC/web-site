@@ -1,135 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Agencia DevWeb — Desarrollo Web Profesional</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agencia DivWeb</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="nav">
-        <div class="brand">
-          <img src="img/logo.png" alt="Logo Agencia DevWeb" class="logo" />
-          <div>
-            <div style="font-weight:700">Agencia DevWeb</div>
-            <div class="small">Diseño • Desarrollo • UX</div>
-          </div>
-        </div>
 
-        <nav>
-          <button class="menu-toggle" aria-expanded="false" onclick="toggleMenu(this)">☰</button>
-          <ul>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
-        </nav>
+  <!-- 🔹 Header -->
+  <header>
+    <div class="logo">
+      <!-- Aquí va tu logo -->
+      <img src="img/logo.png" alt="Logo Agencia DivWeb">
+    </div>
 
-        <a class="cta" href="#contacto">Solicitar presupuesto</a>
-      </div>
-    </header>
+    <!-- Menú de navegación -->
+    <nav class="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#portafolio">Portafolio</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
 
-    <main>
-      <section class="hero">
-        <div>
-          <h1>Construimos sitios web rápidos, accesibles y modernos</h1>
-          <p class="muted">Creamos experiencias digitales que convierten visitantes en clientes. Desde landing pages hasta tiendas online.</p>
-          <div class="actions">
-            <a class="cta" href="#contacto">Empezar proyecto</a>
-            <a class="small" href="#portfolio">Ver trabajos</a>
-          </div>
+    <!-- Menú hamburguesa -->
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
 
-          <div class="grid" id="servicios">
-            <div class="service card">
-              <h3>Diseño UX/UI</h3>
-              <p class="muted">Diseños centrados en el usuario listos para desarrollo.</p>
-            </div>
-            <div class="service card">
-              <h3>Desarrollo Frontend</h3>
-              <p class="muted">HTML, CSS moderno y JavaScript para interfaces rápidas.</p>
-            </div>
-            <div class="service card">
-              <h3>Tiendas Online</h3>
-              <p class="muted">E-commerce optimizados para convertir visitas en ventas.</p>
-            </div>
-            <div class="service card">
-              <h3>Mantenimiento y SEO</h3>
-              <p class="muted">Soporte, velocidad y posicionamiento en buscadores.</p>
-            </div>
-          </div>
-        </div>
+  <!-- 🔹 Hero principal -->
+  <section class="hero" id="inicio">
+    <h1>Desarrollo Web Profesional</h1>
+    <p>Diseñamos páginas modernas, rápidas y optimizadas para tu negocio.</p>
+    <a href="#portafolio" class="btn">Ver trabajos</a>
+  </section>
 
-        <aside class="card">
-          <img src="img/logo.jpg" alt="Proyecto destacado" />
-          <div style="margin-top:12px">
-            <strong>Proyecto destacado:</strong>
-            <div class="muted">Tienda online — +40% ventas en 3 meses</div>
-          </div>
-        </aside>
-      </section>
+  <!-- 🔹 Sección Servicios -->
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <p>Ofrecemos desarrollo web a medida, diseño responsivo, SEO, branding y soluciones digitales personalizadas.</p>
+    <img src="img/servicios.jpg" alt="Servicios de desarrollo web">
+  </section>
 
-      <section class="portfolio" id="portfolio">
-        <h2>Portfolio reciente</h2>
-        <div class="portfolio-grid">
-          <article class="portfolio-item card">
-            <img src="img/trabajo.jpg" alt="Proyecto 1">
-            <div class="meta">
-              <strong>Landing Startup</strong>
-              <div class="muted">Responsive con A/B testing.</div>
-            </div>
-          </article>
-          <article class="portfolio-item card">
-            <img src="img/trabajo2.jpg" alt="Proyecto 2">
-            <div class="meta">
-              <strong>Tienda e-commerce</strong>
-              <div class="muted">Checkout y pasarela de pago.</div>
-            </div>
-          </article>
-          <article class="portfolio-item card">
-            <img src="img/trabajo3.jpg" alt="Proyecto 3">
-            <div class="meta">
-              <strong>Panel administrativo</strong>
-              <div class="muted">Control de inventario y ventas.</div>
-            </div>
-          </article>
-          <article class="portfolio-item card">
-            <img src="img/trabajo4.jpg" alt="Proyecto 4">
-            <div class="meta">
-              <strong>Blog corporativo</strong>
-              <div class="muted">Optimizado para SEO.</div>
-            </div>
-          </article>
-        </div>
-      </section>
+  <!-- 🔹 Sección Portafolio -->
+  <section id="portafolio">
+    <h2>Portafolio</h2>
+    <p>Algunos de nuestros proyectos destacados para clientes satisfechos.</p>
+    <img src="img/portafolio.jpg" alt="Portafolio de proyectos">
+  </section>
 
-      <section class="contact" id="contacto">
-        <div class="card">
-          <h2>Contacto</h2>
-          <form onsubmit="return enviarFormulario(event)">
-            <label for="nombre">Nombre</label>
-            <input id="nombre" name="nombre" type="text" required>
-            <label for="email">Correo</label>
-            <input id="email" name="email" type="email" required>
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-            <button type="submit">Enviar mensaje</button>
-          </form>
-        </div>
-        <aside class="card">
-          <h3>Información</h3>
-          <p class="muted">Email: hola@devweb.example<br>Tel: +51 912 345 678</p>
-        </aside>
-      </section>
-    </main>
+  <!-- 🔹 Sección Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tienes un proyecto en mente? ¡Hablemos y hagamos realidad tu idea!</p>
+    <a href="mailto:tuemail@agenciadivweb.com" class="btn">Escríbenos</a>
+  </section>
 
-    <footer>
-      © <span id="year"></span> Agencia DevWeb
-    </footer>
-  </div>
+  <!-- 🔹 Footer -->
+  <footer>
+    <p>&copy; 2025 Agencia DivWeb - Todos los derechos reservados</p>
+  </footer>
 
-  <script src="app.js"></script>
+  <!-- Script del menú hamburguesa -->
   <script src="script.js"></script>
 </body>
 </html>
