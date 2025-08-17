@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agencia DevWeb — Desarrollo Web Profesional</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="nav">
+        <div class="brand">
+          <img src="img/trabajo.png" alt="Logo Agencia DevWeb" class="logo" />
+          <div>
+            <div style="font-weight:700">Agencia DevWeb</div>
+            <div class="small">Diseño • Desarrollo • UX</div>
+          </div>
+        </div>
+
+        <nav>
+          <button class="menu-toggle" aria-expanded="false" onclick="toggleMenu(this)">☰</button>
+          <ul>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <a class="cta" href="#contacto">Solicitar presupuesto</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Construimos sitios web rápidos, accesibles y modernos</h1>
+          <p class="muted">Creamos experiencias digitales que convierten visitantes en clientes. Desde landing pages hasta tiendas online.</p>
+          <div class="actions">
+            <a class="cta" href="#contacto">Empezar proyecto</a>
+            <a class="small" href="#portfolio">Ver trabajos</a>
+          </div>
+
+          <div class="grid" id="servicios">
+            <div class="service card">
+              <h3>Diseño UX/UI</h3>
+              <p class="muted">Diseños centrados en el usuario listos para desarrollo.</p>
+            </div>
+            <div class="service card">
+              <h3>Desarrollo Frontend</h3>
+              <p class="muted">HTML, CSS moderno y JavaScript para interfaces rápidas.</p>
+            </div>
+            <div class="service card">
+              <h3>Tiendas Online</h3>
+              <p class="muted">E-commerce optimizados para convertir visitas en ventas.</p>
+            </div>
+            <div class="service card">
+              <h3>Mantenimiento y SEO</h3>
+              <p class="muted">Soporte, velocidad y posicionamiento en buscadores.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card">
+          <img src="img/logo.jpg" alt="Logo" />
+          <div style="margin-top:12px">
+            <strong>Proyecto destacado:</strong>
+            <div class="muted">Tienda online — +40% ventas en 3 meses</div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="portfolio" id="portfolio">
+        <h2>Portfolio reciente</h2>
+        <div class="portfolio-grid">
+          <article class="portfolio-item card">
+            <img src="img/trabajo.jpeg" alt="Proyecto 1">
+            <div class="meta">
+              <strong>Landing Startup</strong>
+              <div class="muted">Responsive con A/B testing.</div>
+            </div>
+          </article>
+          <article class="portfolio-item card">
+            <img src="img/trabajo2.jpeg" alt="Proyecto 2">
+            <div class="meta">
+              <strong>Tienda e-commerce</strong>
+              <div class="muted">Checkout y pasarela de pago.</div>
+            </div>
+          </article>
+          <article class="portfolio-item card">
+            <img src="img/trabajo3.jpeg" alt="Proyecto 3">
+            <div class="meta">
+              <strong>Panel administrativo</strong>
+              <div class="muted">Control de inventario y ventas.</div>
+            </div>
+          </article>
+          <article class="portfolio-item card">
+            <img src="img/trabajo4.jpeg" alt="Proyecto 4">
+            <div class="meta">
+              <strong>Blog corporativo</strong>
+              <div class="muted">Optimizado para SEO.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" id="contacto">
+        <div class="card">
+          <h2>Contacto</h2>
+          <form onsubmit="return enviarFormulario(event)">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" required>
+            <label for="email">Correo</label>
+            <input id="email" name="email" type="email" required>
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            <button type="submit">Enviar mensaje</button>
+          </form>
+        </div>
+        <aside class="card">
+          <h3>Información</h3>
+          <p class="muted">Email: hola@devweb.example<br>Tel: +51 912 345 678</p>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Agencia DevWeb
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
