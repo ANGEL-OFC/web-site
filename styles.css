@@ -1,3 +1,7 @@
+body {
+  color: #fff !important;
+}
+
 /* 🎨 Variables principales */
 :root {
   --color-principal: #000;             /* Fondo negro base para degradados */
