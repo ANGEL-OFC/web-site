@@ -223,17 +223,21 @@ p, li, a, span {
   color: #eee;
 }
 
-/* -- Fuerza letras blancas en todo el sitio, menos footer -- */
 .hero h1,
 section h2,
-h1, h2, h3, h4, h5 {
+section h1, section h2, section h3, section h4, section h5,
+header h1, header h2, header h3, header h4, header h5 {
   color: #fff !important;
 }
 
 .hero p,
 section p,
-p, li, a, span {
+section li,
+section a,
+section span,
+header p,
+header li,
+header a,
+header span {
   color: #fff !important;
 }
-
-/* El footer sigue con sus colores originales */
