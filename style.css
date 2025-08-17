@@ -1,163 +1,16 @@
-/* 🎨 Paleta de colores */
-:root {
-  --color-primario: #1abc9c;     /* Verde turquesa */
-  --color-secundario: #2c3e50;   /* Azul oscuro elegante */
-  --color-fondo: #ecf0f3;        /* Fondo claro */
-  --color-boton: #34495e;        /* Botón gris azulado */
-  --color-boton-hover: #1abc9c;  /* Hover verde */
-  --texto-claro: #fff;
-  --texto-oscuro: #2c3e50;
-}
-
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  background: var(--color-fondo);
-  color: var(--texto-oscuro);
-  line-height: 1.6;
-}
-
-/* 🔹 Header */
-header {
-  background: var(--color-secundario);
-  color: var(--texto-claro);
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Logo */
-.logo img {
-  max-width: 140px;
-  height: auto;
-  transition: transform 0.3s;
-}
-.logo img:hover {
-  transform: scale(1.08);
-}
-
-/* Nav */
-.nav {
-  display: flex;
-  gap: 20px;
-}
-.nav a {
-  color: var(--texto-claro);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-.nav a:hover {
-  color: var(--color-primario);
-}
-
-/* Botón hamburguesa */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-}
-.hamburger span {
-  width: 28px;
-  height: 3px;
-  background: var(--texto-claro);
-  border-radius: 3px;
-  transition: 0.3s;
-}
-
-/* Hero principal */
-.hero {
-  height: 100vh;
-  background: linear-gradient(135deg, var(--color-secundario), var(--color-primario));
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: var(--texto-claro);
-  padding: 0 20px;
-}
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-.hero .btn {
-  background: var(--color-boton);
-  color: var(--texto-claro);
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 5px 5px 15px #cfd6db, -5px -5px 15px #ffffff;
-  transition: all 0.3s ease;
-}
-.hero .btn:hover {
-  background: var(--color-boton-hover);
-  transform: translateY(-4px);
-}
-
-/* Secciones */
-section {
-  padding: 80px 20px;
-  text-align: center;
-}
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: var(--color-secundario);
-}
-section p {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* Imágenes */
-section img {
-  max-width: 100%;
-  border-radius: 15px;
-  box-shadow: 5px 5px 15px #cfd6db, -5px -5px 15px #ffffff;
-  transition: transform 0.3s ease;
-}
-section img:hover {
-  transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-  background: var(--color-secundario);
-  color: var(--texto-claro);
-  text-align: center;
-  padding: 20px;
-}
-
-/* 📱 Responsive */
+/* ===== Estilos Responsivos (Móviles y Tablets) ===== */
 @media (max-width: 768px) {
+  /* Header */
   .nav {
     display: none;
     flex-direction: column;
-    background: var(--color-secundario);
+    background: var(--color-principal);
     position: absolute;
     top: 70px;
-    right: 30px;
+    right: 0;
+    width: 200px;
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 0 0 0 10px;
   }
 
   .nav.active {
@@ -166,5 +19,36 @@ footer {
 
   .hamburger {
     display: flex;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    max-width: 110px;
+  }
+
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
   }
 }
