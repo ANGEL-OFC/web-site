@@ -27,15 +27,28 @@ header {
     background: var(--color-primario);
     color: var(--texto-claro);
     padding: 20px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* 🔹 Logo */
+.logo img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
 }
 
 /* 🔹 Navegación */
 .nav {
     display: flex;
-    justify-content: center;
     gap: 20px;
-    margin-top: 10px;
 }
 
 .nav a {
@@ -49,17 +62,23 @@ header {
     color: var(--color-boton-hover);
 }
 
-/* 🔹 Logo */
-.logo img {
-    max-width: 150px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    transition: transform 0.3s ease-in-out;
+/* 🔹 Botón Hamburguesa */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
-.logo img:hover {
-    transform: scale(1.05);
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--texto-claro);
+    border-radius: 3px;
+    transition: 0.3s;
 }
 
 /* 🔹 Secciones */
@@ -89,6 +108,8 @@ button, .btn {
     cursor: pointer;
     font-size: 1rem;
     border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
@@ -97,7 +118,7 @@ button:hover, .btn:hover {
     transform: translateY(-3px);
 }
 
-/* 🔹 Imágenes (ej. portafolio) */
+/* 🔹 Imágenes */
 section img {
     max-width: 100%;
     height: auto;
@@ -117,21 +138,26 @@ footer {
     color: var(--texto-claro);
     text-align: center;
     padding: 20px;
-button, .btn {
-    background: var(--color-boton);
-    color: var(--texto-claro);
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 1rem;
-    border-radius: 8px;
-    text-decoration: none;  /* 👈 importante para que los <a> no tengan subrayado */
-    display: inline-block;  /* 👈 lo hace comportarse como botón */
-    transition: background 0.3s ease, transform 0.3s ease;
 }
 
-button:hover, .btn:hover {
-    background: var(--color-boton-hover);
-    transform: translateY(-3px);
-}
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: var(--color-secundario);
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
 }
