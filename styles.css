@@ -239,3 +239,19 @@ header a,
 header span {
   color: #fff !important;
 }
+
+/* Botones globales */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #007BFF;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
