@@ -9,6 +9,39 @@
   --texto-oscuro: #2c3e50;
 }
 
+/* Fuente general */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #111; /* texto negro */
+  line-height: 1.6;
+  background: #ffffff; /* Fondo blanco limpio */
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #111; /* negro para títulos */
+  letter-spacing: 1px;
+}
+
+/* Párrafos y enlaces */
+p, li, a, span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #222; /* gris oscuro */
+}
+
+/* Botones con tipografía más fuerte */
+button, .btn {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
 /* Reset */
 * {
   margin: 0;
