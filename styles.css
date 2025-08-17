@@ -475,3 +475,35 @@ footer {
   font-size: 13px;
   color: #777;
 }
+
+/* Fuente general */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff; /* texto blanco por el fondo oscuro */
+  line-height: 1.6;
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #40e0d0; /* turquesa bonito */
+  letter-spacing: 1px;
+}
+
+/* Párrafos y enlaces */
+p, li, a, span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #ddd;
+}
+
+/* Botones con tipografía más fuerte */
+button, .btn {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
