@@ -112,6 +112,7 @@ nav a:hover, .nav a:hover {
 .hero .btn:hover {
   background: var(--color-boton-hover);
   transform: translateY(-4px);
+  }
 
 /* SECCIONES */
 section {
