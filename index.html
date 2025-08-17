@@ -4,107 +4,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agencia DivWeb</title>
-  <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- 🔹 Header -->
+  <!-- Header -->
   <header>
     <div class="logo">
-      <!-- Aquí va tu logo -->
       <img src="img/logo-agencia.jpg" alt="Logo Agencia DivWeb">
     </div>
-
-    <!-- Menú de navegación -->
     <nav class="nav">
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
       <a href="#portafolio">Portafolio</a>
       <a href="#contacto">Contacto</a>
     </nav>
-
-    <!-- Menú hamburguesa -->
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="hamburger" id="hamburger-btn">
+      <span></span><span></span><span></span>
     </div>
   </header>
 
-  <!-- 🔹 Hero principal -->
+  <!-- Hero principal -->
   <section class="hero" id="inicio">
-  <div class="hero-texto">
-    <h1>Desarrollo Web Profesional</h1>
-    <p>Diseñamos páginas modernas, rápidas y optimizadas para tu negocio.</p>
-    <a href="#portafolio" class="btn">Ver trabajos</a>
-  </div>
+    <div class="hero-texto">
+      <h1>Desarrollo Web Profesional</h1>
+      <p>Diseñamos páginas modernas, rápidas y optimizadas para tu negocio.</p>
+      <a href="#portafolio" class="btn">Ver trabajos</a>
+    </div>
+    <div class="hero-img">
+      <img src="img/trabajo.jpeg" alt="Desarrollo Web">
+    </div>
+  </section>
 
-  <!-- Imagen debajo del texto -->
-  <div class="hero-img">
-    <img src="img/trabajo.jpeg" alt="Desarrollo Web">
-  </div>
-</section>
-
-  <!-- 🔹 Sección Servicios -->
+  <!-- Servicios -->
   <section id="servicios">
     <h2>Servicios</h2>
     <p>Ofrecemos desarrollo web a medida, diseño responsivo, SEO, branding y soluciones digitales personalizadas.</p>
     <img src="img/trabajo2.jpeg" alt="Servicios de desarrollo web">
   </section>
 
-  <!-- 🔹 Sección Portafolio -->
+  <!-- Portafolio -->
   <section id="portafolio">
     <h2>Portafolio</h2>
     <p>Algunos de nuestros proyectos destacados para clientes satisfechos.</p>
     <img src="img/trabajo3.jpeg" alt="Portafolio de proyectos">
   </section>
 
+  <!-- Contacto -->
   <section id="contacto">
-  <h2>Escríbenos</h2>
-  <p>¿Quieres más información o un presupuesto? Contáctanos ahora.</p>
-  
-  <!-- Aquí va el botón -->
-  <a href="mailto:tuemail@dominio.com" class="btn">Escríbenos</a>
-</section>
+    <h2>Escríbenos</h2>
+    <p>¿Quieres más información o un presupuesto? Contáctanos ahora.</p>
+    <a href="mailto:tuemail@dominio.com" class="btn">Escríbenos</a>
+  </section>
 
-  <!-- 🔹 Footer -->
-<footer class="footer">
-  <div class="footer-contenedor">
-    <p>&copy; 2025 Agencia DivWeb - Todos los derechos reservados</p>
-    <!-- Logo y descripción -->
-    <div class="footer-info">
-      <h3>Agencia DivWeb</h3>
-      <p>Desarrollamos páginas web modernas y profesionales para tu negocio.</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-contenedor">
+      <div class="footer-info">
+        <h3>Agencia DivWeb</h3>
+        <p>Desarrollamos páginas web modernas y profesionales para tu negocio.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Enlaces útiles</h4>
+        <ul>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-redes">
+        <h4>Síguenos</h4>
+        <a href="#">Facebook</a> |
+        <a href="#">Instagram</a> |
+        <a href="#">LinkedIn</a>
+      </div>
     </div>
-
-    <!-- Enlaces rápidos -->
-    <div class="footer-links">
-      <h4>Enlaces útiles</h4>
-      <ul>
-        <li><a href="#">Términos y Condiciones</a></li>
-        <li><a href="#">Política de Privacidad</a></li>
-        <li><a href="#">Preguntas Frecuentes</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+    <div class="footer-copy">
+      <p>&copy; 2025 Agencia DivWeb - Todos los derechos reservados.</p>
     </div>
+  </footer>
 
-    <!-- Redes sociales -->
-    <div class="footer-redes">
-      <h4>Síguenos</h4>
-      <a href="#">Facebook</a> |
-      <a href="#">Instagram</a> |
-      <a href="#">LinkedIn</a>
-    </div>
-  </div>
-
-  <div class="footer-copy">
-    <p>&copy; 2025 Agencia DivWeb - Todos los derechos reservados.</p>
-  </div>
-</footer>
-
-  <!-- Script del menú hamburguesa -->
-  <script src="script.js"></script>
+  <!-- Script menú hamburguesa -->
+  <script>
+    const hamburger = document.getElementById('hamburger-btn');
+    const nav = document.querySelector('.nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
