@@ -222,3 +222,18 @@ p, li, a, span {
   font-weight: 400;
   color: #eee;
 }
+
+/* -- Fuerza letras blancas en todo el sitio, menos footer -- */
+.hero h1,
+section h2,
+h1, h2, h3, h4, h5 {
+  color: #fff !important;
+}
+
+.hero p,
+section p,
+p, li, a, span {
+  color: #fff !important;
+}
+
+/* El footer sigue con sus colores originales */
