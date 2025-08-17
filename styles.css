@@ -102,7 +102,7 @@ nav a:hover, .nav a:hover {
 
 .hero .btn {
   background: var(--color-boton);
-  color: var(--texto-claro);
+  color: var(--texto-principal);
   padding: 12px 25px;
   border-radius: 30px;
   font-weight: bold;
