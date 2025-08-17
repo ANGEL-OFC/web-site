@@ -241,17 +241,17 @@ header span {
 }
 
 /* Botones globales */
-.btn {
+a.btn, .btn {
   display: inline-block;
   padding: 12px 24px;
-  background: #007BFF;
-  color: #fff;
-  border-radius: 8px;
+  background: #007BFF !important;
+  color: #fff !important;
+  border-radius: 8px !important;
   text-decoration: none;
   font-weight: 600;
   transition: background 0.3s ease;
 }
 
-.btn:hover {
-  background: #0056b3;
+a.btn:hover, .btn:hover {
+  background: #0056b3 !important;
 }
