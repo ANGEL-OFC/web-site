@@ -3,75 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Página Web</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Agencia DivWeb</title>
   <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- ===== Header ===== -->
+
+  <!-- 🔹 Header -->
   <header>
     <div class="logo">
-      <img src="img/logo.png" alt="Logo">
+      <!-- Aquí va tu logo -->
+      <img src="img/logo-agencia.jpg" alt="Logo Agencia DivWeb">
     </div>
 
-    <!-- Botón menú móvil -->
-    <div class="hamburger" onclick="document.querySelector('.nav').classList.toggle('active')">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <!-- Navegación -->
+    <!-- Menú de navegación -->
     <nav class="nav">
       <a href="#inicio">Inicio</a>
-      <a href="#nosotros">Nosotros</a>
       <a href="#servicios">Servicios</a>
+      <a href="#portafolio">Portafolio</a>
       <a href="#contacto">Contacto</a>
     </nav>
+
+    <!-- Menú hamburguesa -->
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
 
-  <!-- ===== Hero ===== -->
-  <section id="inicio" class="hero">
-    <div class="hero-texto">
-      <h1>Bienvenido a mi página</h1>
-      <p>Un sitio moderno y responsivo con fondo completo.</p>
-      <a href="#nosotros" class="btn">Conócenos</a>
-    </div>
-    <div class="hero-img">
-      <img src="img/hero.png" alt="Imagen Hero">
-    </div>
-  </section>
+  <!-- 🔹 Hero principal -->
+  <section class="hero" id="inicio">
+  <div class="hero-texto">
+    <h1>Desarrollo Web Profesional</h1>
+    <p>Diseñamos páginas modernas, rápidas y optimizadas para tu negocio.</p>
+    <a href="#portafolio" class="btn">Ver trabajos</a>
+  </div>
 
-  <!-- ===== Sección Nosotros ===== -->
-  <section id="nosotros">
-    <h2>Nosotros</h2>
-    <p>Somos un equipo apasionado por el diseño y desarrollo web.</p>
-    <img src="img/nosotros.jpg" alt="Equipo">
-  </section>
+  <!-- Imagen debajo del texto -->
+  <div class="hero-img">
+    <img src="img/trabajo.jpeg" alt="Desarrollo Web">
+  </div>
+</section>
 
-  <!-- ===== Sección Servicios ===== -->
+  <!-- 🔹 Sección Servicios -->
   <section id="servicios">
     <h2>Servicios</h2>
-    <p>Ofrecemos soluciones digitales adaptadas a tus necesidades.</p>
-    <img src="img/servicios.jpg" alt="Servicios">
+    <p>Ofrecemos desarrollo web a medida, diseño responsivo, SEO, branding y soluciones digitales personalizadas.</p>
+    <img src="img/trabajo2.jpeg" alt="Servicios de desarrollo web">
   </section>
 
-  <!-- ===== Footer ===== -->
-  <footer class="footer">
-    <div class="footer-contenedor">
-      <div>
-        <h3>Contacto</h3>
-        <p>Email: contacto@ejemplo.com</p>
-        <p>Tel: +51 999 999 999</p>
-      </div>
-      <div>
-        <h3>Síguenos</h3>
-        <a href="#">Facebook</a><br>
-        <a href="#">Instagram</a><br>
-        <a href="#">Twitter</a>
-      </div>
+  <!-- 🔹 Sección Portafolio -->
+  <section id="portafolio">
+    <h2>Portafolio</h2>
+    <p>Algunos de nuestros proyectos destacados para clientes satisfechos.</p>
+    <img src="img/trabajo3.jpeg" alt="Portafolio de proyectos">
+  </section>
+
+  <section id="contacto">
+  <h2>Escríbenos</h2>
+  <p>¿Quieres más información o un presupuesto? Contáctanos ahora.</p>
+  
+  <!-- Aquí va el botón -->
+  <a href="mailto:tuemail@dominio.com" class="btn">Escríbenos</a>
+</section>
+
+  <!-- 🔹 Footer -->
+<footer class="footer">
+  <div class="footer-contenedor">
+    <p>&copy; 2025 Agencia DivWeb - Todos los derechos reservados</p>
+    <!-- Logo y descripción -->
+    <div class="footer-info">
+      <h3>Agencia DivWeb</h3>
+      <p>Desarrollamos páginas web modernas y profesionales para tu negocio.</p>
     </div>
-    <p class="footer-copy">&copy; 2025 Mi Página Web</p>
-  </footer>
+
+    <!-- Enlaces rápidos -->
+    <div class="footer-links">
+      <h4>Enlaces útiles</h4>
+      <ul>
+        <li><a href="#">Términos y Condiciones</a></li>
+        <li><a href="#">Política de Privacidad</a></li>
+        <li><a href="#">Preguntas Frecuentes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="footer-redes">
+      <h4>Síguenos</h4>
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+
+  <div class="footer-copy">
+    <p>&copy; 2025 Agencia DivWeb - Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+  <!-- Script del menú hamburguesa -->
+  <script src="script.js"></script>
 </body>
 </html>
