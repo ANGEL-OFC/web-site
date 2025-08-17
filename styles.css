@@ -2,6 +2,10 @@ body {
   color: #fff !important;
 }
 
+h1, h2, h3, h4, h5, h6, p, a, li, span {
+  color: #fff !important;
+}
+
 /* 🎨 Variables principales */
 :root {
   --color-principal: #000;             /* Fondo negro base para degradados */
