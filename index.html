@@ -51,29 +51,55 @@
     <img src="img/trabajo3.jpeg" alt="Portafolio de proyectos">
   </section>
 
-<!-- ===== Product Detail Modal ===== -->
-<div id="product-modal" class="modal" aria-hidden="true">
-  <div class="modal__overlay" data-close-modal></div>
-  <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="pm-title">
-    <button class="modal__close" type="button" data-close-modal>&times;</button>
-    <div class="modal__media">
-      <img src="img/trabajo2" alt="Imagen del producto" loading="lazy">
-    </div>
-    <div class="modal__info">
-      <h3 id="pm-title"></h3>
-      <p id="pm-desc" class="muted"></p>
-      <div class="modal__price-row">
-        <span id="pm-price" class="price"></span>
-        <div class="qty">
-          <button type="button" class="qty__btn" data-qty="minus">−</button>
-          <input id="pm-qty" type="number" min="1" value="1">
-          <button type="button" class="qty__btn" data-qty="plus">+</button>
-        </div>
+<!-- Productos -->
+  <section class="productos" id="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="img/producto1.jpg" alt="Producto 1">
+        <h3>Producto 1</h3>
+        <p>Descripción breve del producto.</p>
+        <a href="#" class="btn">Comprar</a>
       </div>
-      <button id="pm-add" class="btn btn-primary">Agregar al carrito</button>
+      <div class="card">
+        <img src="img/producto2.jpg" alt="Producto 2">
+        <h3>Producto 2</h3>
+        <p>Descripción breve del producto.</p>
+        <a href="#" class="btn">Comprar</a>
+      </div>
+      <div class="card">
+        <img src="img/producto3.jpg" alt="Producto 3">
+        <h3>Producto 3</h3>
+        <p>Descripción breve del producto.</p>
+        <a href="#" class="btn">Comprar</a>
+      </div>
     </div>
-  </div>
-</div>
+  </section>
+
+  <!-- Productos Populares -->
+  <section class="populares" id="populares">
+    <h2>Productos Más Populares</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="img/popular1.jpg" alt="Popular 1">
+        <h3>Popular 1</h3>
+        <p>Producto más vendido y recomendado.</p>
+        <a href="#" class="btn">Comprar</a>
+      </div>
+      <div class="card">
+        <img src="img/popular2.jpg" alt="Popular 2">
+        <h3>Popular 2</h3>
+        <p>Producto más vendido y recomendado.</p>
+        <a href="#" class="btn">Comprar</a>
+      </div>
+      <div class="card">
+        <img src="img/popular3.jpg" alt="Popular 3">
+        <h3>Popular 3</h3>
+        <p>Producto más vendido y recomendado.</p>
+        <a href="#" class="btn">Comprar</a>
+      </div>
+    </div>
+  </section>
 
 <!-- ===== Carrito (off-canvas) ===== -->
 <aside id="cart" class="cart" aria-hidden="true">
