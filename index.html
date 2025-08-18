@@ -94,5 +94,14 @@
       nav.classList.toggle('active');
     });
   </script>
+
+  <script>
+  const links = document.querySelectorAll('.nav a');
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active'); // Cierra el menú
+    });
+  });
+</script>
 </body>
 </html>
