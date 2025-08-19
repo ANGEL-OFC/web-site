@@ -68,3 +68,28 @@
 .btn:hover {
   background: #0056b3;
 }
+
+/* ===== Centrar sección Checkout ===== */
+.checkout.section {
+  display: flex;
+  justify-content: center;   /* centra horizontal */
+  align-items: flex-start;   /* alinea arriba */
+  padding: 40px 15px;
+}
+
+.checkout .container {
+  width: 100%;
+  max-width: 900px;          /* límite de ancho */
+  margin: 0 auto;            /* centra dentro del contenedor */
+}
+
+.checkout__grid {
+  display: flex;
+  justify-content: center;
+}
+
+.checkout__grid form {
+  width: 100%;
+  max-width: 600px;          /* ancho del formulario */
+  margin: 0 auto;            /* centrado */
+}
