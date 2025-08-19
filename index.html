@@ -94,55 +94,63 @@
     <img src="img/trabajo3.jpeg" alt="Portafolio de proyectos">
   </section>
 
-<!-- Productos -->
-  <section class="productos" id="productos">
-    <h2>Nuestros Productos</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="img/trabajo.jpeg" alt="Producto 1">
-        <h3>Producto 1</h3>
-        <p>Descripción breve del producto.</p>
-        <a href="#" class="btn">Comprar</a>
-      </div>
-      <div class="card">
-        <img src="img/trabajo2.jpeg" alt="Producto 2">
-        <h3>Producto 2</h3>
-        <p>Descripción breve del producto.</p>
-        <a href="#" class="btn">Comprar</a>
-      </div>
-      <div class="card">
-        <img src="img/trabajo3.jpeg" alt="Producto 3">
-        <h3>Producto 3</h3>
-        <p>Descripción breve del producto.</p>
-        <a href="#" class="btn">Comprar</a>
-      </div>
+<!-- <!-- ==================== NUESTROS PRODUCTOS ==================== -->
+<section class="productos" id="productos">
+  <h2>Nuestros Productos</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="img/trabajo.jpg" alt="Producto 1">
+      <h3>Producto 1</h3>
+      <p>$20.00</p>
+      <button class="btn add-to-cart" data-name="Producto 1" data-price="20">Agregar al carrito</button>
     </div>
-  </section>
+    <div class="card">
+      <img src="img/trabajo2.jpg" alt="Producto 2">
+      <h3>Producto 2</h3>
+      <p>$35.00</p>
+      <button class="btn add-to-cart" data-name="Producto 2" data-price="35">Agregar al carrito</button>
+    </div>
+  </div>
+</section>
 
-  <!-- Productos Populares -->
-  <section class="populares" id="populares">
-    <h2>Productos Más Populares</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="img/trabajo.jpg" alt="Popular 1">
-        <h3>Popular 1</h3>
-        <p>Producto más vendido y recomendado.</p>
-        <a href="#" class="btn">Comprar</a>
-      </div>
-      <div class="card">
-        <img src="img/trabajo2.jpg" alt="Popular 2">
-        <h3>Popular 2</h3>
-        <p>Producto más vendido y recomendado.</p>
-        <a href="#" class="btn">Comprar</a>
-      </div>
-      <div class="card">
-        <img src="img/trabajo3.jpg" alt="Popular 3">
-        <h3>Popular 3</h3>
-        <p>Producto más vendido y recomendado.</p>
-        <a href="#" class="btn">Comprar</a>
-      </div>
+<!-- ==================== PRODUCTOS POPULARES ==================== -->
+<section class="populares" id="populares">
+  <h2>Productos Más Populares</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="img/popular1.jpg" alt="Popular 1">
+      <h3>Popular 1</h3>
+      <p>$50.00</p>
+      <button class="btn add-to-cart" data-name="Popular 1" data-price="50">Agregar al carrito</button>
     </div>
-  </section>
+    <div class="card">
+      <img src="img/popular2.jpg" alt="Popular 2">
+      <h3>Popular 2</h3>
+      <p>$45.00</p>
+      <button class="btn add-to-cart" data-name="Popular 2" data-price="45">Agregar al carrito</button>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CARRITO ==================== -->
+<section class="carrito" id="carrito">
+  <h2>🛒 Carrito</h2>
+  <div id="cart-items"></div>
+  <p id="cart-total">Total: $0</p>
+  <button class="btn" onclick="checkout()">Finalizar Compra</button>
+</section>
+
+<!-- ==================== FINALIZAR COMPRA ==================== -->
+<section class="checkout" id="checkout">
+  <h2>Finalizar Compra</h2>
+  <form id="checkout-form">
+    <input type="text" placeholder="Nombre Completo" required>
+    <input type="email" placeholder="Correo Electrónico" required>
+    <input type="text" placeholder="Dirección de Envío" required>
+    <button type="submit" class="btn">Confirmar Pedido</button>
+  </form>
+  <p id="checkout-msg"></p>
+</section>
 
 <!-- ===== Carrito (off-canvas) ===== -->
 <aside id="cart" class="cart" aria-hidden="true">
