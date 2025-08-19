@@ -314,3 +314,50 @@ togglePaymentHooks();
 // NOTA: Para activar pagos reales, inserta los SDKs oficiales y crea los botones aquí.
 // PayPal: https://developer.paypal.com/docs/checkout/
 // MercadoPago: https://www.mercadopago.com.pe/developers/es
+
+let cart = [];
+
+document.querySelectorAll(".add-to-cart").forEach(button => {
+  button.addEventListener("click", () => {
+    const name = button.getAttribute("data-name");
+    const price = parseFloat(button.getAttribute("data-price"));
+    cart.push({ name, price });
+    renderCart();
+  });
+});
+
+function renderCart() {
+  const cartItems = document.getElementById("cart-items");
+  const cartTotal = document.getElementById("cart-total");
+
+  cartItems.innerHTML = "";
+  let total = 0;
+
+  cart.forEach((item, index) => {
+    total += item.price;
+    cartItems.innerHTML += `
+      <div>
+        ${item.name} - $${item.price.toFixed(2)} 
+        <button onclick="removeItem(${index})">❌</button>
+      </div>
+    `;
+  });
+
+  cartTotal.textContent = "Total: $" + total.toFixed(2);
+}
+
+function removeItem(index) {
+  cart.splice(index, 1);
+  renderCart();
+}
+
+function checkout() {
+  document.getElementById("checkout").scrollIntoView({ behavior: "smooth" });
+}
+
+document.getElementById("checkout-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  document.getElementById("checkout-msg").textContent = "✅ Pedido confirmado. ¡Gracias por tu compra!";
+  cart = [];
+  renderCart();
+});
