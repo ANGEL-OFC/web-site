@@ -37,6 +37,99 @@
 
   <!-- Header -->
   <header>
+
+<!-- ==================== PRODUCTOS ==================== -->
+<section id="productos" class="section">
+  <h2>Nuestros Productos</h2>
+  <div class="products-grid">
+    <div class="product-card" 
+         data-id="p1" 
+         data-title="Producto 1" 
+         data-price="20" 
+         data-image="img/prod1.jpg"
+         data-desc="Descripción breve del producto 1">
+      <img src="img/prod1.jpg" alt="Producto 1">
+      <h4>Producto 1</h4>
+      <p class="price">S/ 20.00</p>
+      <button class="btn" data-action="view">Ver</button>
+      <button class="btn add-to-cart" data-action="add">Agregar al carrito</button>
+    </div>
+
+    <div class="product-card" 
+         data-id="p2" 
+         data-title="Producto 2" 
+         data-price="35" 
+         data-image="img/prod2.jpg"
+         data-desc="Descripción breve del producto 2">
+      <img src="img/prod2.jpg" alt="Producto 2">
+      <h4>Producto 2</h4>
+      <p class="price">S/ 35.00</p>
+      <button class="btn" data-action="view">Ver</button>
+      <button class="btn add-to-cart" data-action="add">Agregar al carrito</button>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== POPULARES ==================== -->
+<section id="populares" class="section">
+  <h2>Productos Populares</h2>
+  <div class="products-grid">
+    <div class="product-card" 
+         data-id="p3" 
+         data-title="Producto Popular" 
+         data-price="50" 
+         data-image="img/prod3.jpg"
+         data-desc="Un producto muy vendido">
+      <img src="img/prod3.jpg" alt="Producto Popular">
+      <h4>Producto Popular</h4>
+      <p class="price">S/ 50.00</p>
+      <button class="btn" data-action="view">Ver</button>
+      <button class="btn add-to-cart" data-action="add">Agregar al carrito</button>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CARRITO ==================== -->
+<div id="cart-backdrop"></div>
+<div id="cart">
+  <h2>Tu carrito</h2>
+  <div id="cart-items"></div>
+  <p>Subtotal: <strong id="cart-subtotal">S/ 0.00</strong></p>
+  <p>Productos en carrito: <strong id="cart-count">0</strong></p>
+  <button class="btn" data-cart="empty">Vaciar carrito</button>
+  <button class="btn" data-cart="go-checkout" onclick="location.hash='#checkout'">Finalizar compra</button>
+  <button class="btn" data-cart="close">Cerrar</button>
+</div>
+<div id="fab-cart">
+  🛒 <span id="fab-count">0</span>
+</div>
+
+<!-- ==================== CHECKOUT ==================== -->
+<section id="checkout" class="section">
+  <h2>Finalizar Compra</h2>
+  <div id="checkout-summary"></div>
+  <p>Subtotal: <strong id="co-subtotal">S/ 0.00</strong></p>
+  <p>Envío: <strong id="co-shipping">S/ 0.00</strong></p>
+  <p>Total: <strong id="co-total">S/ 0.00</strong></p>
+
+  <form id="checkout-form">
+    <input type="text" name="name" placeholder="Nombre completo" required>
+    <input type="tel" name="phone" placeholder="Teléfono" required>
+    <input type="email" name="email" placeholder="Correo electrónico">
+    <input type="text" name="address" placeholder="Dirección de entrega" required>
+    <textarea name="notes" placeholder="Notas del pedido"></textarea>
+
+    <h3>Método de pago</h3>
+    <label><input type="radio" name="paymethod" value="whatsapp" checked> WhatsApp</label>
+    <label><input type="radio" name="paymethod" value="paypal"> PayPal</label>
+    <label><input type="radio" name="paymethod" value="mercadopago"> MercadoPago</label>
+
+    <button type="submit" class="btn">Confirmar Pedido</button>
+    <button type="button" id="btn-whatsapp" class="btn">Enviar por WhatsApp</button>
+  </form>
+</section>
+
+
     <div class="logo">
       <img src="img/logo-tienda.png" alt="Logo Tienda">
     </div>
