@@ -333,3 +333,46 @@ a.btn:hover, .btn:hover {
   .modal__card { grid-template-columns: 1fr; }
   .checkout__grid { grid-template-columns: 1fr; }
 }
+
+/* ====== Centrar TODO el contenido ====== */
+body {
+  max-width: 1200px;     /* límite del ancho del contenido */
+  margin: 0 auto;        /* centra horizontalmente */
+  padding: 0 15px;       /* pequeño espacio a los lados */
+  font-family: Arial, sans-serif;
+}
+
+/* Centrar textos principales */
+h1, h2, h3, h4, h5, h6, p {
+  text-align: center;
+}
+
+/* Ajuste general de secciones */
+section {
+  margin: 40px 0;        /* espacio entre secciones */
+}
+
+/* Asegurar que los grids de productos sigan centrados */
+.products-grid,
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  justify-items: center;  /* centra las tarjetas dentro del grid */
+}
+
+/* En pantallas medianas */
+@media (min-width: 768px) {
+  .products-grid,
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* En pantallas grandes */
+@media (min-width: 1200px) {
+  .products-grid,
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
