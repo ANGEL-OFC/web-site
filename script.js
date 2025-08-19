@@ -314,3 +314,22 @@ togglePaymentHooks();
 // NOTA: Para activar pagos reales, inserta los SDKs oficiales y crea los botones aquí.
 // PayPal: https://developer.paypal.com/docs/checkout/
 // MercadoPago: https://www.mercadopago.com.pe/developers/es
+
+// --- Sincronizar carrito en la sección y en el off-canvas ---
+function syncCartUI(cartItemsHTML, subtotal, count) {
+  // En el aside (carrito flotante)
+  const asideItems = document.getElementById("cart-items");
+  const asideSubtotal = document.getElementById("cart-subtotal");
+
+  if (asideItems) asideItems.innerHTML = cartItemsHTML;
+  if (asideSubtotal) asideSubtotal.textContent = `S/ ${subtotal.toFixed(2)}`;
+
+  // En la sección visible
+  const sectionItems = document.getElementById("cart-items-section");
+  const sectionSubtotal = document.getElementById("cart-subtotal-section");
+  const sectionCount = document.getElementById("cart-count");
+
+  if (sectionItems) sectionItems.innerHTML = cartItemsHTML;
+  if (sectionSubtotal) sectionSubtotal.textContent = `S/ ${subtotal.toFixed(2)}`;
+  if (sectionCount) sectionCount.textContent = count;
+}
