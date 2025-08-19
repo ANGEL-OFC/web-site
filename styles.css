@@ -1,17 +1,9 @@
-body {
-  color: #fff !important;
-}
-
-h1, h2, h3, h4, h5, h6, p, a, li, span {
-  color: #fff !important;
-}
-
 /* 🎨 Variables principales */
 :root {
-  --color-principal: #000;             /* Fondo negro base para degradados */
+  --color-principal: #000;             /* Fondo negro base */
   --color-secundario: #1abc9c;         /* Turquesa para detalles */
-  --color-boton: #0056b3;              /* Azul para botones */
-  --color-boton-hover: #40e0d0;        /* Turquesa claro al pasar el mouse */
+  --color-boton: #007BFF;              /* Azul para botones */
+  --color-boton-hover: #0056b3;        /* Azul más oscuro */
   --texto-principal: #fff;             /* Texto blanco */
   --sombra: 0 6px 24px rgba(0,0,0,0.45);
 }
@@ -54,9 +46,7 @@ header {
   object-fit: cover;
   transition: transform 0.3s;
 }
-.logo img:hover {
-  transform: scale(1.08);
-}
+.logo img:hover { transform: scale(1.08); }
 
 nav, .nav {
   display: flex;
@@ -69,9 +59,7 @@ nav a, .nav a {
   letter-spacing: 1px;
   transition: color 0.3s;
 }
-nav a:hover, .nav a:hover {
-  color: var(--color-boton-hover);
-}
+nav a:hover, .nav a:hover { color: var(--color-boton-hover); }
 
 /* HERO */
 .hero {
@@ -100,40 +88,23 @@ nav a:hover, .nav a:hover {
   text-shadow: 0 1px 5px #000;
 }
 
-/* Botón global: se aplica a TODOS los .btn */
-.btn {
+/* BOTONES */
+.btn, a.btn {
   display: inline-block;
-  padding: 14px 30px;
+  padding: 12px 24px;
   background: var(--color-boton);
   color: var(--texto-principal);
-  border-radius: 30px;
-  font-weight: bold;
+  border-radius: 8px;
+  font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
 }
-
-.btn:hover {
+.btn:hover, a.btn:hover {
   background: var(--color-boton-hover);
   transform: translateY(-4px);
 }
 
-/* 🔘 Botones generales */
-.btn {
-  background: var(--color-boton);
-  color: var(--texto-principal);
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-.btn:hover {
-  background: var(--color-boton-hover);
-  transform: translateY(-4px);
-}
-
-/* SECCIONES */
+/* SECCIONES GENERALES */
 section {
   padding: 80px 20px 60px 20px;
   text-align: center;
@@ -155,7 +126,6 @@ section p {
   max-width: 700px;
   margin: 0 auto 24px auto;
 }
-
 section img {
   max-width: 100%;
   border-radius: 15px;
@@ -163,9 +133,7 @@ section img {
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   transition: transform 0.3s;
 }
-section img:hover {
-  transform: scale(1.05);
-}
+section img:hover { transform: scale(1.05); }
 
 /* FOOTER */
 footer {
@@ -174,7 +142,6 @@ footer {
   text-align: center;
   padding: 28px 16px 18px 16px;
   font-size: 1rem;
-  font-family: inherit;
   border-top: 1px solid #222d;
   margin-top: auto;
 }
@@ -185,11 +152,9 @@ footer a {
   margin: 0 8px;
   transition: color 0.3s;
 }
-footer a:hover {
-  color: #fff;
-}
+footer a:hover { color: #fff; }
 
-/* Botón hamburguesa (para responsive) */
+/* BOTÓN HAMBURGUESA */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -212,7 +177,15 @@ footer a:hover {
 }
 @media (max-width: 700px) {
   .nav, nav { display: none; }
-  .nav.active { display: flex; position: absolute; top: 70px; right: 15px; background: rgba(0,0,0,0.88); flex-direction: column; border-radius: 12px; padding: 18px 20px;}
+  .nav.active {
+    display: flex;
+    position: absolute;
+    top: 70px; right: 15px;
+    background: rgba(0,0,0,0.88);
+    flex-direction: column;
+    border-radius: 12px;
+    padding: 18px 20px;
+  }
   .hamburger { display: flex; }
   .hero { padding: 24px 5px; min-height: 70vh; }
   section { margin: 12px 2px; }
@@ -224,51 +197,63 @@ footer a:hover {
   section { padding: 30px 2px; }
 }
 
-/* Títulos y texto general */
-h1, h2, h3, h4, h5 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: var(--color-secundario);
+/* ===== SOLO Productos y Populares ===== */
+#productos .products-grid,
+#populares .products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+#productos .product-card,
+#populares .product-card,
+#productos .card,
+#populares .card {
+  background: #fff;
+  color: #000;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+#productos .product-card:hover,
+#populares .product-card:hover,
+#productos .card:hover,
+#populares .card:hover {
+  transform: scale(1.03);
+}
+@media (min-width: 768px) {
+  #productos .products-grid,
+  #populares .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  #productos .products-grid,
+  #populares .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ===== Checkout ===== */
+#checkout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+  background: rgba(0,0,0,0.65);
+  padding: 30px;
+  border-radius: 16px;
+}
+#checkout h2 {
+  text-align: center;
   margin-bottom: 15px;
 }
-p, li, a, span {
-  font-family: 'Roboto', 'Poppins', sans-serif;
-  font-weight: 400;
-  color: #eee;
-}
-
-.hero h1,
-section h2,
-section h1, section h2, section h3, section h4, section h5,
-header h1, header h2, header h3, header h4, header h5 {
-  color: #fff !important;
-}
-
-.hero p,
-section p,
-section li,
-section a,
-section span,
-header p,
-header li,
-header a,
-header span {
-  color: #fff !important;
-}
-
-/* Botones globales */
-a.btn, .btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #007BFF !important;
-  color: #fff !important;
-  border-radius: 8px !important;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
-
-a.btn:hover, .btn:hover {
-  background: #0056b3 !important;
+@media (max-width: 768px) {
+  #checkout { grid-template-columns: 1fr; }
 }
