@@ -3,19 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Online</title>
+  <link rel="stylesheet" href="styles.css">
+ <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título SEO -->
   <title>Tienda Online - Productos de Calidad</title>
   <meta name="description" content="Compra los mejores productos al mejor precio. Envíos rápidos y seguros 🚚✨.">
 
-  <!-- Open Graph -->
+  <!-- Palabras clave -->
+  <meta name="keywords" content="tienda online, compras, productos, ecommerce, ofertas">
+  <meta name="author" content="Tienda online">
+
+  <!-- Open Graph (WhatsApp, Facebook) -->
   <meta property="og:title" content="Tienda Online - Productos de Calidad">
   <meta property="og:description" content="Compra los mejores productos al mejor precio. Envíos rápidos y seguros 🚚✨.">
   <meta property="og:image" content="img/logo-tienda.png">
+  <meta property="og:url" content="https://tusitio.com">
   <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tienda Online - Productos de Calidad">
+  <meta name="twitter:description" content="Compra los mejores productos al mejor precio. Envíos rápidos y seguros 🚚✨.">
+  <meta name="twitter:image" content="img/logo-tienda.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/logo-tienda.png" type="image/png">
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+ 
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 
   <!-- Estilos -->
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="style.css">
+</head>
 </head>
 <body>
 
@@ -27,145 +61,113 @@
     <nav class="nav">
       <a href="#inicio">Inicio</a>
       <a href="#productos">Productos</a>
-      <a href="#populares">Populares</a>
-      <a href="#carrito">Carrito</a>
+      <a href="#contacto">Contacto</a>
     </nav>
     <div class="hamburger" id="hamburger-btn">
       <span></span><span></span><span></span>
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero principal -->
   <section class="hero" id="inicio">
     <div class="hero-texto">
-      <h1>Tienda En Línea Rápida y Segura</h1>
+      <h1>Tienda En Línea Rapida Y Segura</h1>
       <p>Ofrecemos los mejores productos de calidad.</p>
-      <a href="#productos" class="btn">Ver catálogo</a>
+      <a href="#productos" class="btn">Ver catálogo de productos</a>
     </div>
     <div class="hero-img">
-      <img src="img/logo-tienda.png" alt="Tienda logo">
+      <img src="img/trabajo.jpeg" alt="Desarrollo Web">
     </div>
   </section>
 
-  <!-- Nuestros Productos -->
-  <section class="productos section" id="productos">
+  <!-- Servicios -->
+  <section id="productos">
+    <h2>productos</h2>
+    <p>Ofrecemos una gran cantidad de productos para su dia a dia.</p>
+    <img src="img/trabajo2.jpeg" alt="Servicios de desarrollo web">
+  </section>
+
+  <!-- Portafolio -->
+  <section id="productos mas vendidos">
+    <h2>Productos mas vendidos</h2>
+    <p>Algunos productos destacan porque son mas vendidos.</p>
+    <img src="img/trabajo3.jpeg" alt="Portafolio de proyectos">
+  </section>
+
+<!-- Productos -->
+  <section class="productos" id="productos">
     <h2>Nuestros Productos</h2>
     <div class="grid">
-      <article class="card product-card"
-               data-id="p1"
-               data-title="Producto 1"
-               data-price="20"
-               data-image="img/producto.jpeg">
-        <img src="img/producto.jpeg" alt="Producto 1">
+      <div class="card">
+        <img src="img/trabajo.jpeg" alt="Producto 1">
         <h3>Producto 1</h3>
-        <p class="price">S/ 20.00</p>
-        <button class="btn" data-action="add">Agregar al carrito</button>
-      </article>
-
-      <article class="card product-card"
-               data-id="p2"
-               data-title="Producto 2"
-               data-price="35"
-               data-image="img/producto2.jpeg">
-        <img src="img/producto2.jpeg" alt="Producto 2">
+        <p>Descripción breve del producto.</p>
+        <a href="#" class="btn">Comprar</a>
+      </div>
+      <div class="card">
+        <img src="img/trabajo2.jpeg" alt="Producto 2">
         <h3>Producto 2</h3>
-        <p class="price">S/ 35.00</p>
-        <button class="btn" data-action="add">Agregar al carrito</button>
-      </article>
+        <p>Descripción breve del producto.</p>
+        <a href="#" class="btn">Comprar</a>
+      </div>
+      <div class="card">
+        <img src="img/trabajo3.jpeg" alt="Producto 3">
+        <h3>Producto 3</h3>
+        <p>Descripción breve del producto.</p>
+        <a href="#" class="btn">Comprar</a>
+      </div>
     </div>
   </section>
 
   <!-- Productos Populares -->
-  <section class="populares section" id="populares">
+  <section class="populares" id="populares">
     <h2>Productos Más Populares</h2>
     <div class="grid">
-      <article class="card product-card"
-               data-id="pop1"
-               data-title="Popular 1"
-               data-price="50"
-               data-image="img/popular.jpeg">
-        <img src="img/popular.jpeg" alt="Popular 1">
+      <div class="card">
+        <img src="img/trabajo.jpg" alt="Popular 1">
         <h3>Popular 1</h3>
-        <p class="price">S/ 50.00</p>
-        <button class="btn" data-action="add">Agregar al carrito</button>
-      </article>
-
-      <article class="card product-card"
-               data-id="pop2"
-               data-title="Popular 2"
-               data-price="40"
-               data-image="img/popular2.jpeg">
-        <img src="img/popular2.jpeg" alt="Popular 2">
+        <p>Producto más vendido y recomendado.</p>
+        <a href="#" class="btn">Comprar</a>
+      </div>
+      <div class="card">
+        <img src="img/trabajo2.jpg" alt="Popular 2">
         <h3>Popular 2</h3>
-        <p class="price">S/ 40.00</p>
-        <button class="btn" data-action="add">Agregar al carrito</button>
-      </article>
+        <p>Producto más vendido y recomendado.</p>
+        <a href="#" class="btn">Comprar</a>
+      </div>
+      <div class="card">
+        <img src="img/trabajo3.jpg" alt="Popular 3">
+        <h3>Popular 3</h3>
+        <p>Producto más vendido y recomendado.</p>
+        <a href="#" class="btn">Comprar</a>
+      </div>
     </div>
   </section>
 
-  <!-- Carrito -->
-  <section class="carrito section" id="carrito">
-    <h2>🛒 Carrito</h2>
-    <div id="cart-items"></div>
-    <p>Subtotal: <strong id="cart-subtotal">S/ 0.00</strong></p>
-    <p>Productos en carrito: <strong id="cart-count">0</strong></p>
-    <button class="btn" id="empty-cart">Vaciar carrito</button>
-  </section>
+<!-- ===== Carrito (off-canvas) ===== -->
+<aside id="cart" class="cart" aria-hidden="true">
+  <div class="cart__header">
+    <h3>Tu carrito</h3>
+    <button class="cart__close" type="button" data-cart="close">&times;</button>
+  </div>
+  <div id="cart-items" class="cart__items"></div>
+  <div class="cart__footer">
+    <div class="cart__totals">
+      <span>Subtotal:</span>
+      <strong id="cart-subtotal">S/ 0.00</strong>
+    </div>
+    <div class="cart__actions">
+      <a href="#checkout" class="btn btn-primary" data-cart="go-checkout">Ir al pago</a>
+      <button class="btn btn-ghost" type="button" data-cart="empty">Vaciar</button>
+    </div>
+  </div>
+</aside>
+<div id="cart-backdrop" class="cart-backdrop" data-cart="close"></div>
 
-  <!-- Scripts -->
-  <script src="script.js"></script>
-  <script>
-  (() => {
-    const ready = (fn) => document.readyState !== "loading" ? fn() : document.addEventListener("DOMContentLoaded", fn);
-
-    ready(() => {
-      const toNumber = (v) => Number(String(v).replace(/[^\d.]/g, "")) || 0;
-
-      document.querySelectorAll(".product-card").forEach((card) => {
-        const btn = card.querySelector("[data-action='add']");
-        btn.addEventListener("click", () => {
-          const id = card.dataset.id;
-          const title = card.dataset.title;
-          const price = Number(card.dataset.price);
-          const image = card.dataset.image;
-          addToCart({ id, title, price, image }, 1);
-          renderCart();
-        });
-      });
-
-      document.getElementById("empty-cart").addEventListener("click", () => {
-        cart = [];
-        renderCart();
-      });
-    });
-
-    let cart = [];
-
-    function addToCart(product, qty) {
-      const item = cart.find(p => p.id === product.id);
-      if (item) item.qty += qty;
-      else cart.push({ ...product, qty });
-    }
-
-    function renderCart() {
-      const itemsDiv = document.getElementById("cart-items");
-      const subtotalEl = document.getElementById("cart-subtotal");
-      const countEl = document.getElementById("cart-count");
-
-      itemsDiv.innerHTML = "";
-      let subtotal = 0, count = 0;
-
-      cart.forEach(p => {
-        subtotal += p.price * p.qty;
-        count += p.qty;
-        itemsDiv.innerHTML += `<p>${p.title} x${p.qty} - S/ ${(p.price * p.qty).toFixed(2)}</p>`;
-      });
-
-      subtotalEl.textContent = "S/ " + subtotal.toFixed(2);
-      countEl.textContent = count;
-    }
-  })();
-  </script>
+<!-- ===== Botón flotante del carrito ===== -->
+<button id="fab-cart" class="fab-cart" type="button" title="Ver carrito" aria-label="Ver carrito">
+  🛒 <span id="fab-count" class="badge">0</span>
+</button>
 
 <!-- ===== Checkout ===== -->
 <section id="checkout" class="checkout section">
@@ -225,6 +227,13 @@
   </div>
 </section>
 
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2>Escríbenos</h2>
+    <p>Quieres ordenar algo aslo aca ase clik en el botón y ordena ya!!.</p>
+    <a href="wa.me//" class="btn">Ordene su pedido</a>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-contenedor">
@@ -272,52 +281,5 @@
 </script>
 <script src="script.js"></script>
 <script src="app.js"></script>
-
-<!-- Después de <script src="script.js"></script> -->
-<script>
-(() => {
-  // Ejecutar cuando el DOM esté listo
-  const ready = (fn) => document.readyState !== 'loading'
-    ? fn() : document.addEventListener('DOMContentLoaded', fn);
-
-  ready(() => {
-    const toNumber = (v) => Number(String(v).replace(/[^\d.]/g, "")) || 0;
-
-    // Buscar tarjetas "antiguas" en tus secciones existentes
-    const zonas = ['#productos', '#populares', '#productos\\ mas\\ vendidos']; // incluye el id con espacio
-    zonas.forEach(selZona => {
-      document.querySelectorAll(`${selZona} .card`).forEach((card, i) => {
-        // Botones típicos que tienes: .add-to-cart o .btn dentro de la tarjeta
-        const addBtn = card.querySelector("[data-action='add'], .add-to-cart, .btn");
-        if (!addBtn) return;
-
-        // Construir los datos desde el DOM (título, precio, imagen)
-        const title = card.querySelector("h3")?.textContent?.trim() || `Producto ${i+1}`;
-        const priceText = (card.querySelector(".price")?.textContent
-                          || card.querySelector("p")?.textContent
-                          || "S/ 0").trim();
-        const price = toNumber(priceText);
-        const image = card.querySelector("img")?.getAttribute("src") || "";
-        const id = card.dataset?.id || `card-${selZona}-${i}`;
-
-        addBtn.addEventListener("click", (e) => {
-          e.preventDefault();
-          try {
-            // Usa las funciones ya definidas en tu script.js
-            addToCart({ id, title, price, image, desc: "" }, 1);
-            openCart();
-          } catch (err) {
-            console.error("Error al agregar al carrito:", err);
-          }
-        });
-      });
-    });
-
-    // Pintar el subtotal inicial (S/ 0.00) y badge
-    if (typeof renderCart === "function") renderCart();
-    if (typeof updateCartBadge === "function") updateCartBadge();
-  });
-})();
-</script>
 </body>
 </html>
