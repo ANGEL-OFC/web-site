@@ -104,6 +104,7 @@ const cartBackdrop = $("#cart-backdrop");
 const fabCart = $("#fab-cart");
 const fabCount = $("#fab-count");
 const cartSubtotalEl = $("#cart-subtotal");
+const cartCountEl = $("#cart-count"); // cantidad de productos
 
 function openCart() {
   cartEl.classList.add("show");
@@ -121,6 +122,7 @@ fabCart?.addEventListener("click", openCart);
 function updateCartBadge() {
   const count = cart.reduce((acc, p) => acc + p.qty, 0);
   if (fabCount) fabCount.textContent = count;
+  if (cartCountEl) cartCountEl.textContent = count;
 }
 
 function renderCart() {
@@ -148,6 +150,7 @@ function renderCart() {
     `).join("");
   }
   cartSubtotalEl.textContent = currency(cartSubtotal());
+  updateCartBadge();
 }
 cartItemsEl?.addEventListener("click", (e) => {
   const btn = e.target.closest("button");
@@ -256,14 +259,10 @@ checkoutForm?.addEventListener("submit", (e) => {
     return;
   }
   const data = Object.fromEntries(new FormData(checkoutForm).entries());
-  // Aquí podrías enviar a tu backend. Por ahora, mostramos confirmación.
   alert(`¡Gracias ${data.name}! Hemos recibido tu pedido.\nMétodo de pago: ${data.paymethod}`);
-  // Limpia carrito si quieres:
-  // cart = []; saveCart(); renderCart(); renderCheckout();
 });
 
 // -------- WhatsApp (envía el pedido) --------
-// Reemplaza con tu número, formato internacional sin espacios ni signos, ej: "51999999999"
 const WHATSAPP_NUMBER = "51999999999";
 
 btnWhats?.addEventListener("click", () => {
@@ -310,60 +309,3 @@ function togglePaymentHooks() {
 }
 checkoutForm?.addEventListener("change", togglePaymentHooks);
 togglePaymentHooks();
-
-// NOTA: Para activar pagos reales, inserta los SDKs oficiales y crea los botones aquí.
-// PayPal: https://developer.paypal.com/docs/checkout/
-// MercadoPago: https://www.mercadopago.com.pe/developers/es
-
-let cart = [];
-
-document.querySelectorAll(".add-to-cart").forEach(button => {
-  button.addEventListener("click", () => {
-    const name = button.getAttribute("data-name");
-    const price = parseFloat(button.getAttribute("data-price"));
-    cart.push({ name, price });
-    renderCart();
-  });
-});
-
-function renderCart() {
-  const cartItemsContainer = document.querySelector("#cart-items");
-  if (!cartItemsContainer) return;
-
-  cartItemsContainer.innerHTML = "";
-
-  let subtotal = 0;
-
-  cart.forEach(item => {
-    subtotal += item.price * item.qty;
-
-    const li = document.createElement("li");
-    li.className = "cart-item";
-
-    li.innerHTML = `
-      <img src="${item.image}" alt="${item.title}" class="cart-item-img">
-      <div class="cart-item-info">
-        <h4>${item.title}</h4>
-        <p>S/ ${item.price.toFixed(2)} x ${item.qty}</p>
-      </div>
-      <button class="remove-item" data-id="${item.id}">❌</button>
-    `;
-
-    cartItemsContainer.appendChild(li);
-  });
-
-  // 🔹 Calcular cantidad total de productos
-  const totalItems = cart.reduce((acc, item) => acc + item.qty, 0);
-
-  // 🔹 Actualizar Subtotal en soles
-  const subtotalEl = document.querySelector("#cart-subtotal");
-  if (subtotalEl) subtotalEl.textContent = `S/ ${subtotal.toFixed(2)}`;
-
-  // 🔹 Actualizar número de productos en carrito
-  const countEl = document.querySelector("#cart-count");
-  if (countEl) countEl.textContent = totalItems;
-
-  // 🔹 Actualizar badge en el ícono del carrito
-  const badgeEl = document.querySelector("#cart-badge");
-  if (badgeEl) badgeEl.textContent = totalItems;
-}
