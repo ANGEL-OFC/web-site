@@ -357,48 +357,29 @@ a.btn:hover, .btn:hover {
   text-align: center;
 }
 
-/* Esconder menú en móvil */
-.nav {
-  display: none;
-  flex-direction: column;
-  gap: 1rem;
-  background: white;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  width: 200px;
-  padding: 1rem;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-}
-
-/* Cuando se activa */
-.nav.active {
-  display: flex;
-}
-
-/* ====== Productos / Populares ====== */
+/* ====== SOLO productos y populares ====== */
 .products-grid, 
 .grid {
   display: grid;
   grid-template-columns: 1fr; /* En móvil: una sola columna */
   gap: 20px;
-  justify-items: center; /* 🔹 Centra los productos en la grilla */
-  max-width: 1200px;     /* 🔹 Máximo ancho de la sección */
-  margin: 0 auto;        /* 🔹 Centrar toda la sección */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 /* Tarjeta de producto */
-.product-card, .card {
+.product-card, 
+.card {
   background: #fff;
   padding: 15px;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.2s;
-  width: 100%;           /* 🔹 Que ocupen todo el espacio disponible */
-  max-width: 250px;      /* 🔹 Pero no más de 250px cada tarjeta */
 }
-.product-card:hover, .card:hover {
+.product-card:hover, 
+.card:hover {
   transform: scale(1.03);
 }
 
@@ -406,14 +387,55 @@ a.btn:hover, .btn:hover {
 @media (min-width: 768px) {
   .products-grid, 
   .grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 productos por fila */
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Pantallas grandes (ej. monitores) */
+/* Pantallas grandes */
 @media (min-width: 1200px) {
   .products-grid, 
   .grid {
-    grid-template-columns: repeat(4, 1fr); /* 4 productos por fila */
+    grid-template-columns: repeat(4, 1fr);
   }
+}
+
+/* ====== Finalizar compra (checkout) ====== */
+#finalizar-compra {
+  max-width: 800px;   /* ancho cómodo */
+  margin: 40px auto;  /* centrado en PC y móvil */
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#finalizar-compra h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#finalizar-compra form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#finalizar-compra input, 
+#finalizar-compra select, 
+#finalizar-compra textarea, 
+#finalizar-compra button {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+#finalizar-compra button {
+  background: #28a745;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+#finalizar-compra button:hover {
+  background: #218838;
 }
