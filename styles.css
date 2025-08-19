@@ -283,38 +283,3 @@ a.btn:hover, .btn:hover {
   margin: 0 auto;
   padding: 0 15px;
 }
-
-/* Tarjeta de producto dentro de esas secciones */
-#productos .product-card, 
-#populares .product-card,
-#productos .card, 
-#populares .card {
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-}
-#productos .product-card:hover, 
-#populares .product-card:hover,
-#productos .card:hover, 
-#populares .card:hover {
-  transform: scale(1.03);
-}
-
-/* PC: varias columnas */
-@media (min-width: 768px) {
-  #productos .products-grid,
-  #populares .products-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 productos por fila */
-  }
-}
-
-/* Pantallas grandes (ej. monitores) */
-@media (min-width: 1200px) {
-  #productos .products-grid,
-  #populares .products-grid {
-    grid-template-columns: repeat(4, 1fr); /* 4 productos por fila */
-  }
-}
