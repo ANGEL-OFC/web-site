@@ -327,37 +327,39 @@ document.querySelectorAll(".add-to-cart").forEach(button => {
 });
 
 function renderCart() {
-  const cartItems = document.getElementById("cart-items");
-  const cartTotal = document.getElementById("cart-total");
+  const cartItemsContainer = document.querySelector("#cart-items");
+  if (!cartItemsContainer) return;
 
-  cartItems.innerHTML = "";
-  let total = 0;
+  cartItemsContainer.innerHTML = "";
 
-  cart.forEach((item, index) => {
-    total += item.price;
-    cartItems.innerHTML += `
-      <div>
-        ${item.name} - $${item.price.toFixed(2)} 
-        <button onclick="removeItem(${index})">❌</button>
+  let subtotal = 0;
+
+  cart.forEach(item => {
+    subtotal += item.price * item.qty;
+
+    const li = document.createElement("li");
+    li.className = "cart-item";
+
+    li.innerHTML = `
+      <img src="${item.image}" alt="${item.title}" class="cart-item-img">
+      <div class="cart-item-info">
+        <h4>${item.title}</h4>
+        <p>S/ ${item.price.toFixed(2)} x ${item.qty}</p>
       </div>
+      <button class="remove-item" data-id="${item.id}">❌</button>
     `;
+
+    cartItemsContainer.appendChild(li);
   });
 
-  cartTotal.textContent = "Total: $" + total.toFixed(2);
-}
+  // 🔹 Calcular cantidad total de productos
+  const totalItems = cart.reduce((acc, item) => acc + item.qty, 0);
 
-function removeItem(index) {
-  cart.splice(index, 1);
-  renderCart();
-}
+  // 🔹 Actualizar Subtotal en soles
+  const subtotalEl = document.querySelector("#cart-subtotal");
+  if (subtotalEl) subtotalEl.textContent = `S/ ${subtotal.toFixed(2)}`;
 
-function checkout() {
-  document.getElementById("checkout").scrollIntoView({ behavior: "smooth" });
+  // 🔹 Actualizar número de productos
+  const countEl = document.querySelector("#cart-count");
+  if (countEl) countEl.textContent = totalItems;
 }
-
-document.getElementById("checkout-form").addEventListener("submit", function(e) {
-  e.preventDefault();
-  document.getElementById("checkout-msg").textContent = "✅ Pedido confirmado. ¡Gracias por tu compra!";
-  cart = [];
-  renderCart();
-});
