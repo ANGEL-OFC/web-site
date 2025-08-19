@@ -333,3 +333,217 @@ a.btn:hover, .btn:hover {
   .modal__card { grid-template-columns: 1fr; }
   .checkout__grid { grid-template-columns: 1fr; }
 }
+
+/* ====== Reset básico ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background: #f9f9f9;
+  color: #333;
+  text-align: center; /* Centra todo el texto por defecto */
+}
+
+/* ====== Header ====== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+header .logo img {
+  max-height: 60px;
+}
+header .nav {
+  display: flex;
+  gap: 15px;
+}
+header .nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  margin: 3px 0;
+}
+
+/* ====== Secciones generales ====== */
+.section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+h2 {
+  margin-bottom: 20px;
+}
+
+/* ====== Grids de productos ====== */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Responsive: PC */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ====== Tarjeta de producto ====== */
+.card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+.card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+.price {
+  font-weight: bold;
+  color: #e63946;
+  margin: 8px 0;
+}
+.card .btn {
+  display: inline-block;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  background: #0077b6;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.card .btn:hover {
+  background: #023e8a;
+}
+
+/* ====== Carrito ====== */
+.carrito {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.carrito p {
+  margin: 5px 0;
+}
+
+/* ====== Checkout ====== */
+.checkout {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.checkout__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.checkout__grid > div, 
+.checkout form {
+  flex: 1;
+}
+.checkout__summary p {
+  margin-bottom: 5px;
+}
+.checkout__totals {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.checkout form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.checkout form input, 
+.checkout form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+.checkout .btn {
+  padding: 10px;
+  border-radius: 6px;
+}
+.checkout__actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Responsive: Checkout en 2 columnas */
+@media (min-width: 992px) {
+  .checkout__grid {
+    flex-direction: row;
+  }
+}
+
+/* ====== Footer ====== */
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 30px 20px;
+}
+.footer a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .footer-contenedor {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.footer-copy {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
