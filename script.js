@@ -309,3 +309,19 @@ function togglePaymentHooks() {
 }
 checkoutForm?.addEventListener("change", togglePaymentHooks);
 togglePaymentHooks();
+
+// --- Menú hamburguesa ---
+const hamburgerBtn = document.getElementById("hamburger-btn");
+const nav = document.querySelector(".nav");
+
+// Abrir/cerrar menú
+hamburgerBtn.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
+// Cerrar menú al hacer clic en un enlace
+document.querySelectorAll(".nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("active");
+  });
+});
