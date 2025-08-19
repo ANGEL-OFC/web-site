@@ -167,6 +167,64 @@
   })();
   </script>
 
+<!-- ===== Checkout ===== -->
+<section id="checkout" class="checkout section">
+  <div class="container">
+    <h2>Finalizar compra</h2>
+    <div class="checkout__grid">
+      <div>
+        <h3>Resumen</h3>
+        <div id="checkout-summary" class="checkout__summary"></div>
+        <div class="checkout__totals">
+          <div><span>Subtotal</span><strong id="co-subtotal">S/ 0.00</strong></div>
+          <div><span>Envío</span><strong id="co-shipping">S/ 0.00</strong></div>
+          <div class="total"><span>Total</span><strong id="co-total">S/ 0.00</strong></div>
+        </div>
+      </div>
+      <form id="checkout-form" class="card">
+        <h3>Tus datos</h3>
+        <div class="grid">
+          <label>Nombre y apellido
+            <input name="name" required placeholder="Ej. Juan Pérez">
+          </label>
+          <label>Teléfono
+            <input name="phone" required placeholder="+51 9XXXXXXX">
+          </label>
+          <label>Correo (opcional)
+            <input type="email" name="email" placeholder="tucorreo@mail.com">
+          </label>
+          <label>Dirección
+            <input name="address" required placeholder="Calle 123, Ciudad">
+          </label>
+          <label>Notas del pedido
+            <textarea name="notes" rows="3" placeholder="Instrucciones, referencias, etc."></textarea>
+          </label>
+        </div>
+
+        <h4>Método de pago</h4>
+        <div class="radio-group">
+          <label><input type="radio" name="paymethod" value="contraentrega" checked> Pago contra entrega</label>
+          <label><input type="radio" name="paymethod" value="transferencia"> Transferencia</label>
+          <label><input type="radio" name="paymethod" value="paypal" id="pm-paypal"> PayPal (demo)</label>
+          <label><input type="radio" name="paymethod" value="mercadopago" id="pm-mp"> MercadoPago (demo)</label>
+        </div>
+
+        <!-- Ganchos de pago (coloca SDKs reales si los vas a usar) -->
+        <div id="payment-hooks" class="payment-hooks">
+          <!-- Ejemplo: aquí irían los botones reales de PayPal/MercadoPago -->
+          <div id="paypal-button-container" class="hidden"></div>
+          <div id="mp-button-container" class="hidden"></div>
+        </div>
+
+        <div class="checkout__actions">
+          <button type="submit" class="btn btn-primary">Confirmar pedido</button>
+          <button type="button" id="btn-whatsapp" class="btn btn-ghost">Enviar por WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-contenedor">
