@@ -358,3 +358,29 @@ a.btn:hover, .btn:hover {
   max-width: 600px;          /* ancho del formulario */
   margin: 0 auto;            /* centrado */
 }
+
+/* ===== Centrado de Finalizar compra ===== */
+#checkout {
+  display: flex;
+  justify-content: center;   /* Centrar horizontal */
+  align-items: flex-start;   /* Arriba, no al medio */
+  padding: 60px 15px;
+}
+
+#checkout .container {
+  width: 100%;
+  max-width: 1200px;         /* ancho máximo de la caja */
+  margin: 0 auto;            /* centrado automático */
+}
+
+#checkout .checkout__grid {
+  display: flex;
+  justify-content: center;   /* centra el form dentro */
+  width: 100%;
+}
+
+#checkout .checkout__grid form {
+  width: 100%;
+  max-width: 600px;          /* limita ancho del formulario */
+  margin: 0 auto;            /* asegura que quede centrado */
+}
