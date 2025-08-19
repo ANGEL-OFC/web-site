@@ -359,7 +359,11 @@ function renderCart() {
   const subtotalEl = document.querySelector("#cart-subtotal");
   if (subtotalEl) subtotalEl.textContent = `S/ ${subtotal.toFixed(2)}`;
 
-  // 🔹 Actualizar número de productos
+  // 🔹 Actualizar número de productos en carrito
   const countEl = document.querySelector("#cart-count");
   if (countEl) countEl.textContent = totalItems;
+
+  // 🔹 Actualizar badge en el ícono del carrito
+  const badgeEl = document.querySelector("#cart-badge");
+  if (badgeEl) badgeEl.textContent = totalItems;
 }
