@@ -3,29 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Tienda Online - Productos de Calidad</title>
   <meta name="description" content="Compra los mejores productos al mejor precio. Envíos rápidos y seguros 🚚✨.">
-  <meta name="keywords" content="tienda online, compras, productos, ecommerce, ofertas">
-  <meta name="author" content="Tienda online">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Tienda Online - Productos de Calidad">
   <meta property="og:description" content="Compra los mejores productos al mejor precio. Envíos rápidos y seguros 🚚✨.">
   <meta property="og:image" content="img/logo-tienda.png">
-  <meta property="og:url" content="https://tusitio.com">
   <meta property="og:type" content="website">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Tienda Online - Productos de Calidad">
-  <meta name="twitter:description" content="Compra los mejores productos al mejor precio. Envíos rápidos y seguros 🚚✨.">
-  <meta name="twitter:image" content="img/logo-tienda.png">
-
-  <!-- Favicon -->
-  <link rel="icon" href="img/logo-tienda.png" type="image/png">
-
-  <!-- Tipografías -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 
   <!-- Estilos -->
   <link rel="stylesheet" href="styles.css">
@@ -41,37 +27,24 @@
     <nav class="nav">
       <a href="#inicio">Inicio</a>
       <a href="#productos">Productos</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#populares">Populares</a>
+      <a href="#carrito">Carrito</a>
     </nav>
     <div class="hamburger" id="hamburger-btn">
       <span></span><span></span><span></span>
     </div>
   </header>
 
-  <!-- Hero principal -->
+  <!-- Hero -->
   <section class="hero" id="inicio">
     <div class="hero-texto">
-      <h1>Tienda En Línea Rápida Y Segura</h1>
+      <h1>Tienda En Línea Rápida y Segura</h1>
       <p>Ofrecemos los mejores productos de calidad.</p>
-      <a href="#productos" class="btn">Ver catálogo de productos</a>
+      <a href="#productos" class="btn">Ver catálogo</a>
     </div>
     <div class="hero-img">
       <img src="img/trabajo.jpeg" alt="Desarrollo Web">
     </div>
-  </section>
-
-  <!-- Servicios -->
-  <section id="productos">
-    <h2>Productos</h2>
-    <p>Ofrecemos una gran cantidad de productos para su día a día.</p>
-    <img src="img/trabajo2.jpeg" alt="Servicios de desarrollo web">
-  </section>
-
-  <!-- Portafolio -->
-  <section id="productos-mas-vendidos">
-    <h2>Productos más vendidos</h2>
-    <p>Algunos productos destacan porque son los más vendidos.</p>
-    <img src="img/trabajo3.jpeg" alt="Portafolio de proyectos">
   </section>
 
   <!-- Nuestros Productos -->
@@ -82,42 +55,22 @@
                data-id="p1"
                data-title="Producto 1"
                data-price="20"
-               data-image="img/trabajo.jpeg"
-               data-desc="Descripción breve del producto.">
+               data-image="img/trabajo.jpeg">
         <img src="img/trabajo.jpeg" alt="Producto 1">
         <h3>Producto 1</h3>
         <p class="price">S/ 20.00</p>
-        <div class="actions">
-          <button class="btn" data-action="add">Agregar al carrito</button>
-        </div>
+        <button class="btn" data-action="add">Agregar al carrito</button>
       </article>
 
       <article class="card product-card"
                data-id="p2"
                data-title="Producto 2"
                data-price="35"
-               data-image="img/trabajo2.jpeg"
-               data-desc="Descripción breve del producto.">
+               data-image="img/trabajo2.jpeg">
         <img src="img/trabajo2.jpeg" alt="Producto 2">
         <h3>Producto 2</h3>
         <p class="price">S/ 35.00</p>
-        <div class="actions">
-          <button class="btn" data-action="add">Agregar al carrito</button>
-        </div>
-      </article>
-
-      <article class="card product-card"
-               data-id="p3"
-               data-title="Producto 3"
-               data-price="29.9"
-               data-image="img/trabajo3.jpeg"
-               data-desc="Descripción breve del producto.">
-        <img src="img/trabajo3.jpeg" alt="Producto 3">
-        <h3>Producto 3</h3>
-        <p class="price">S/ 29.90</p>
-        <div class="actions">
-          <button class="btn" data-action="add">Agregar al carrito</button>
-        </div>
+        <button class="btn" data-action="add">Agregar al carrito</button>
       </article>
     </div>
   </section>
@@ -130,225 +83,87 @@
                data-id="pop1"
                data-title="Popular 1"
                data-price="50"
-               data-image="img/trabajo2.jpeg"
-               data-desc="Producto más vendido y recomendado.">
-        <img src="img/trabajo2.jpeg" alt="Popular 1">
+               data-image="img/trabajo3.jpeg">
+        <img src="img/trabajo3.jpeg" alt="Popular 1">
         <h3>Popular 1</h3>
         <p class="price">S/ 50.00</p>
-        <div class="actions">
-          <button class="btn" data-action="add">Agregar al carrito</button>
-        </div>
+        <button class="btn" data-action="add">Agregar al carrito</button>
       </article>
 
       <article class="card product-card"
                data-id="pop2"
                data-title="Popular 2"
-               data-price="45"
-               data-image="img/trabajo3.jpeg"
-               data-desc="Producto más vendido y recomendado.">
-        <img src="img/trabajo3.jpeg" alt="Popular 2">
-        <h3>Popular 2</h3>
-        <p class="price">S/ 45.00</p>
-        <div class="actions">
-          <button class="btn" data-action="add">Agregar al carrito</button>
-        </div>
-      </article>
-
-      <article class="card product-card"
-               data-id="pop3"
-               data-title="Popular 3"
                data-price="40"
-               data-image="img/trabajo4.jpeg"
-               data-desc="Producto más vendido y recomendado.">
-        <img src="img/trabajo4.jpeg" alt="Popular 3">
-        <h3>Popular 3</h3>
+               data-image="img/trabajo4.jpeg">
+        <img src="img/trabajo4.jpeg" alt="Popular 2">
+        <h3>Popular 2</h3>
         <p class="price">S/ 40.00</p>
-        <div class="actions">
-          <button class="btn" data-action="add">Agregar al carrito</button>
-        </div>
+        <button class="btn" data-action="add">Agregar al carrito</button>
       </article>
     </div>
   </section>
 
   <!-- Carrito -->
-  <section class="carrito" id="carrito">
+  <section class="carrito section" id="carrito">
     <h2>🛒 Carrito</h2>
     <div id="cart-items"></div>
     <p>Subtotal: <strong id="cart-subtotal">S/ 0.00</strong></p>
     <p>Productos en carrito: <strong id="cart-count">0</strong></p>
+    <button class="btn" id="empty-cart">Vaciar carrito</button>
   </section>
 
-  <!-- Carrito off-canvas -->
-  <aside id="cart" class="cart" aria-hidden="true">
-    <div class="cart__header">
-      <h3>Tu carrito</h3>
-      <button class="cart__close" type="button" data-cart="close">&times;</button>
-    </div>
-    <div id="cart-items" class="cart__items"></div>
-    <div class="cart__footer">
-      <div class="cart__totals">
-        <span>Subtotal:</span>
-        <strong id="cart-subtotal">S/ 0.00</strong>
-      </div>
-      <div class="cart__actions">
-        <a href="#checkout" class="btn btn-primary" data-cart="go-checkout">Ir al pago</a>
-        <button class="btn btn-ghost" type="button" data-cart="empty">Vaciar</button>
-      </div>
-    </div>
-  </aside>
-  <div id="cart-backdrop" class="cart-backdrop" data-cart="close"></div>
-
-  <!-- Botón flotante carrito -->
-  <button id="fab-cart" class="fab-cart" type="button" title="Ver carrito" aria-label="Ver carrito">
-    🛒 <span id="fab-count" class="badge">0</span>
-  </button>
-
-  <!-- Checkout -->
-  <section id="checkout" class="checkout section">
-    <div class="container">
-      <h2>Finalizar compra</h2>
-      <div class="checkout__grid">
-        <div>
-          <h3>Resumen</h3>
-          <div id="checkout-summary" class="checkout__summary"></div>
-          <div class="checkout__totals">
-            <div><span>Subtotal</span><strong id="co-subtotal">S/ 0.00</strong></div>
-            <div><span>Envío</span><strong id="co-shipping">S/ 0.00</strong></div>
-            <div class="total"><span>Total</span><strong id="co-total">S/ 0.00</strong></div>
-          </div>
-        </div>
-        <form id="checkout-form" class="card">
-          <h3>Tus datos</h3>
-          <div class="grid">
-            <label>Nombre y apellido
-              <input name="name" required placeholder="Ej. Juan Pérez">
-            </label>
-            <label>Teléfono
-              <input name="phone" required placeholder="+51 9XXXXXXX">
-            </label>
-            <label>Correo (opcional)
-              <input type="email" name="email" placeholder="tucorreo@mail.com">
-            </label>
-            <label>Dirección
-              <input name="address" required placeholder="Calle 123, Ciudad">
-            </label>
-            <label>Notas del pedido
-              <textarea name="notes" rows="3" placeholder="Instrucciones, referencias, etc."></textarea>
-            </label>
-          </div>
-
-          <h4>Método de pago</h4>
-          <div class="radio-group">
-            <label><input type="radio" name="paymethod" value="contraentrega" checked> Pago contra entrega</label>
-            <label><input type="radio" name="paymethod" value="transferencia"> Transferencia</label>
-            <label><input type="radio" name="paymethod" value="paypal" id="pm-paypal"> PayPal (demo)</label>
-            <label><input type="radio" name="paymethod" value="mercadopago" id="pm-mp"> MercadoPago (demo)</label>
-          </div>
-
-          <!-- Hooks de pago -->
-          <div id="payment-hooks" class="payment-hooks">
-            <div id="paypal-button-container" class="hidden"></div>
-            <div id="mp-button-container" class="hidden"></div>
-          </div>
-
-          <div class="checkout__actions">
-            <button type="submit" class="btn btn-primary">Confirmar pedido</button>
-            <button type="button" id="btn-whatsapp" class="btn btn-ghost">Enviar por WhatsApp</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contacto -->
-  <section id="contacto">
-    <h2>Escríbenos</h2>
-    <p>¿Quieres ordenar algo? Haz clic en el botón y ordena ya!!</p>
-    <a href="wa.me//" class="btn">Ordene su pedido</a>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-contenedor">
-      <div class="footer-info">
-        <h3>Tienda Online</h3>
-        <p>Desarrollamos páginas web modernas y profesionales para tu negocio.</p>
-      </div>
-      <div class="footer-links">
-        <h4>Enlaces útiles</h4>
-        <ul>
-          <li><a href="#">Términos y Condiciones</a></li>
-          <li><a href="#">Política de Privacidad</a></li>
-          <li><a href="#">Preguntas Frecuentes</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </div>
-      <div class="footer-redes">
-        <h4>Síguenos</h4>
-        <a href="#">Facebook</a> |
-        <a href="#">Instagram</a> |
-        <a href="#">Otras</a>
-      </div>
-    </div>
-    <div class="footer-copy">
-      <p>&copy; 2025 Tienda Online - Todos los derechos reservados.</p>
-    </div>
-  </footer>
-
-  <!-- Script menú -->
-  <script>
-    const hamburger = document.getElementById('hamburger-btn');
-    const nav = document.querySelector('.nav');
-    hamburger.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-
-    document.querySelectorAll('.nav a').forEach(link => {
-      link.addEventListener('click', () => nav.classList.remove('active'));
-    });
-  </script>
-
+  <!-- Scripts -->
   <script src="script.js"></script>
-  <script src="app.js"></script>
-
-  <!-- Conexión tarjetas antiguas con el carrito -->
   <script>
   (() => {
-    const ready = (fn) => document.readyState !== 'loading'
-      ? fn() : document.addEventListener('DOMContentLoaded', fn);
+    const ready = (fn) => document.readyState !== "loading" ? fn() : document.addEventListener("DOMContentLoaded", fn);
 
     ready(() => {
       const toNumber = (v) => Number(String(v).replace(/[^\d.]/g, "")) || 0;
-      const zonas = ['#productos', '#populares', '#productos-mas-vendidos'];
 
-      zonas.forEach(selZona => {
-        document.querySelectorAll(`${selZona} .card`).forEach((card, i) => {
-          const addBtn = card.querySelector("[data-action='add'], .add-to-cart, .btn");
-          if (!addBtn) return;
-
-          const title = card.querySelector("h3")?.textContent?.trim() || `Producto ${i+1}`;
-          const priceText = (card.querySelector(".price")?.textContent
-                            || card.querySelector("p")?.textContent
-                            || "S/ 0").trim();
-          const price = toNumber(priceText);
-          const image = card.querySelector("img")?.getAttribute("src") || "";
-          const id = card.dataset?.id || `card-${selZona}-${i}`;
-
-          addBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            try {
-              addToCart({ id, title, price, image, desc: "" }, 1);
-              openCart();
-            } catch (err) {
-              console.error("Error al agregar al carrito:", err);
-            }
-          });
+      document.querySelectorAll(".product-card").forEach((card) => {
+        const btn = card.querySelector("[data-action='add']");
+        btn.addEventListener("click", () => {
+          const id = card.dataset.id;
+          const title = card.dataset.title;
+          const price = Number(card.dataset.price);
+          const image = card.dataset.image;
+          addToCart({ id, title, price, image }, 1);
+          renderCart();
         });
       });
 
-      if (typeof renderCart === "function") renderCart();
-      if (typeof updateCartBadge === "function") updateCartBadge();
+      document.getElementById("empty-cart").addEventListener("click", () => {
+        cart = [];
+        renderCart();
+      });
     });
+
+    let cart = [];
+
+    function addToCart(product, qty) {
+      const item = cart.find(p => p.id === product.id);
+      if (item) item.qty += qty;
+      else cart.push({ ...product, qty });
+    }
+
+    function renderCart() {
+      const itemsDiv = document.getElementById("cart-items");
+      const subtotalEl = document.getElementById("cart-subtotal");
+      const countEl = document.getElementById("cart-count");
+
+      itemsDiv.innerHTML = "";
+      let subtotal = 0, count = 0;
+
+      cart.forEach(p => {
+        subtotal += p.price * p.qty;
+        count += p.qty;
+        itemsDiv.innerHTML += `<p>${p.title} x${p.qty} - S/ ${(p.price * p.qty).toFixed(2)}</p>`;
+      });
+
+      subtotalEl.textContent = "S/ " + subtotal.toFixed(2);
+      countEl.textContent = count;
+    }
   })();
   </script>
 </body>
