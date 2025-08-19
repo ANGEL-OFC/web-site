@@ -104,7 +104,6 @@ const cartBackdrop = $("#cart-backdrop");
 const fabCart = $("#fab-cart");
 const fabCount = $("#fab-count");
 const cartSubtotalEl = $("#cart-subtotal");
-const cartCountEl = $("#cart-count"); // cantidad de productos
 
 function openCart() {
   cartEl.classList.add("show");
@@ -122,7 +121,6 @@ fabCart?.addEventListener("click", openCart);
 function updateCartBadge() {
   const count = cart.reduce((acc, p) => acc + p.qty, 0);
   if (fabCount) fabCount.textContent = count;
-  if (cartCountEl) cartCountEl.textContent = count;
 }
 
 function renderCart() {
@@ -150,7 +148,6 @@ function renderCart() {
     `).join("");
   }
   cartSubtotalEl.textContent = currency(cartSubtotal());
-  updateCartBadge();
 }
 cartItemsEl?.addEventListener("click", (e) => {
   const btn = e.target.closest("button");
@@ -259,10 +256,14 @@ checkoutForm?.addEventListener("submit", (e) => {
     return;
   }
   const data = Object.fromEntries(new FormData(checkoutForm).entries());
+  // Aquí podrías enviar a tu backend. Por ahora, mostramos confirmación.
   alert(`¡Gracias ${data.name}! Hemos recibido tu pedido.\nMétodo de pago: ${data.paymethod}`);
+  // Limpia carrito si quieres:
+  // cart = []; saveCart(); renderCart(); renderCheckout();
 });
 
 // -------- WhatsApp (envía el pedido) --------
+// Reemplaza con tu número, formato internacional sin espacios ni signos, ej: "51999999999"
 const WHATSAPP_NUMBER = "51999999999";
 
 btnWhats?.addEventListener("click", () => {
@@ -310,18 +311,6 @@ function togglePaymentHooks() {
 checkoutForm?.addEventListener("change", togglePaymentHooks);
 togglePaymentHooks();
 
-// --- Menú hamburguesa ---
-const hamburgerBtn = document.getElementById("hamburger-btn");
-const nav = document.querySelector(".nav");
-
-// Abrir/cerrar menú
-hamburgerBtn.addEventListener("click", () => {
-  nav.classList.toggle("active");
-});
-
-// Cerrar menú al hacer clic en un enlace
-document.querySelectorAll(".nav a").forEach(link => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("active");
-  });
-});
+// NOTA: Para activar pagos reales, inserta los SDKs oficiales y crea los botones aquí.
+// PayPal: https://developer.paypal.com/docs/checkout/
+// MercadoPago: https://www.mercadopago.com.pe/developers/es
