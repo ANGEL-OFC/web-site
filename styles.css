@@ -375,3 +375,45 @@ a.btn:hover, .btn:hover {
 .nav.active {
   display: flex;
 }
+
+/* ====== Productos / Populares ====== */
+.products-grid, 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* En móvil: una sola columna */
+  gap: 20px;
+  justify-items: center; /* 🔹 Centra los productos en la grilla */
+  max-width: 1200px;     /* 🔹 Máximo ancho de la sección */
+  margin: 0 auto;        /* 🔹 Centrar toda la sección */
+}
+
+/* Tarjeta de producto */
+.product-card, .card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  width: 100%;           /* 🔹 Que ocupen todo el espacio disponible */
+  max-width: 250px;      /* 🔹 Pero no más de 250px cada tarjeta */
+}
+.product-card:hover, .card:hover {
+  transform: scale(1.03);
+}
+
+/* PC: varias columnas */
+@media (min-width: 768px) {
+  .products-grid, 
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 productos por fila */
+  }
+}
+
+/* Pantallas grandes (ej. monitores) */
+@media (min-width: 1200px) {
+  .products-grid, 
+  .grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 productos por fila */
+  }
+}
