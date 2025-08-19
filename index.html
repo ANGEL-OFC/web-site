@@ -335,5 +335,52 @@
 </script>
 <script src="script.js"></script>
 <script src="app.js"></script>
+
+<!-- Después de <script src="script.js"></script> -->
+<script>
+(() => {
+  // Ejecutar cuando el DOM esté listo
+  const ready = (fn) => document.readyState !== 'loading'
+    ? fn() : document.addEventListener('DOMContentLoaded', fn);
+
+  ready(() => {
+    const toNumber = (v) => Number(String(v).replace(/[^\d.]/g, "")) || 0;
+
+    // Buscar tarjetas "antiguas" en tus secciones existentes
+    const zonas = ['#productos', '#populares', '#productos\\ mas\\ vendidos']; // incluye el id con espacio
+    zonas.forEach(selZona => {
+      document.querySelectorAll(`${selZona} .card`).forEach((card, i) => {
+        // Botones típicos que tienes: .add-to-cart o .btn dentro de la tarjeta
+        const addBtn = card.querySelector("[data-action='add'], .add-to-cart, .btn");
+        if (!addBtn) return;
+
+        // Construir los datos desde el DOM (título, precio, imagen)
+        const title = card.querySelector("h3")?.textContent?.trim() || `Producto ${i+1}`;
+        const priceText = (card.querySelector(".price")?.textContent
+                          || card.querySelector("p")?.textContent
+                          || "S/ 0").trim();
+        const price = toNumber(priceText);
+        const image = card.querySelector("img")?.getAttribute("src") || "";
+        const id = card.dataset?.id || `card-${selZona}-${i}`;
+
+        addBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          try {
+            // Usa las funciones ya definidas en tu script.js
+            addToCart({ id, title, price, image, desc: "" }, 1);
+            openCart();
+          } catch (err) {
+            console.error("Error al agregar al carrito:", err);
+          }
+        });
+      });
+    });
+
+    // Pintar el subtotal inicial (S/ 0.00) y badge
+    if (typeof renderCart === "function") renderCart();
+    if (typeof updateCartBadge === "function") updateCartBadge();
+  });
+})();
+</script>
 </body>
 </html>
