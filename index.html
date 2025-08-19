@@ -94,41 +94,99 @@
     <img src="img/trabajo3.jpeg" alt="Portafolio de proyectos">
   </section>
 
-<!-- <!-- ==================== NUESTROS PRODUCTOS ==================== -->
-<section class="productos" id="productos">
+<<!-- Nuestros Productos (compatible con script.js) -->
+<section class="productos section" id="productos">
   <h2>Nuestros Productos</h2>
   <div class="grid">
-    <div class="card">
-      <img src="img/trabajo.jpg" alt="Producto 1">
+    <article class="card product-card"
+             data-id="p1"
+             data-title="Producto 1"
+             data-price="20"
+             data-image="img/trabajo.jpeg"
+             data-desc="Descripción breve del producto.">
+      <img src="img/trabajo.jpeg" alt="Producto 1">
       <h3>Producto 1</h3>
-      <p>$20.00</p>
-      <button class="btn add-to-cart" data-name="Producto 1" data-price="20">Agregar al carrito</button>
-    </div>
-    <div class="card">
-      <img src="img/trabajo2.jpg" alt="Producto 2">
+      <p class="price">S/ 20.00</p>
+      <div class="actions">
+        <button class="btn" data-action="add">Agregar al carrito</button>
+      </div>
+    </article>
+
+    <article class="card product-card"
+             data-id="p2"
+             data-title="Producto 2"
+             data-price="35"
+             data-image="img/trabajo2.jpeg"
+             data-desc="Descripción breve del producto.">
+      <img src="img/trabajo2.jpeg" alt="Producto 2">
       <h3>Producto 2</h3>
-      <p>$35.00</p>
-      <button class="btn add-to-cart" data-name="Producto 2" data-price="35">Agregar al carrito</button>
-    </div>
+      <p class="price">S/ 35.00</p>
+      <div class="actions">
+        <button class="btn" data-action="add">Agregar al carrito</button>
+      </div>
+    </article>
+
+    <article class="card product-card"
+             data-id="p3"
+             data-title="Producto 3"
+             data-price="29.9"
+             data-image="img/trabajo3.jpeg"
+             data-desc="Descripción breve del producto.">
+      <img src="img/trabajo3.jpeg" alt="Producto 3">
+      <h3>Producto 3</h3>
+      <p class="price">S/ 29.90</p>
+      <div class="actions">
+        <button class="btn" data-action="add">Agregar al carrito</button>
+      </div>
+    </article>
   </div>
 </section>
 
-<!-- ==================== PRODUCTOS POPULARES ==================== -->
-<section class="populares" id="populares">
+<!-- Productos Más Populares (compatible con script.js) -->
+<section class="populares section" id="populares">
   <h2>Productos Más Populares</h2>
   <div class="grid">
-    <div class="card">
-      <img src="img/popular1.jpg" alt="Popular 1">
+    <article class="card product-card"
+             data-id="pop1"
+             data-title="Popular 1"
+             data-price="50"
+             data-image="img/trabajo2.jpeg"
+             data-desc="Producto más vendido y recomendado.">
+      <img src="img/trabajo2.jpeg" alt="Popular 1">
       <h3>Popular 1</h3>
-      <p>$50.00</p>
-      <button class="btn add-to-cart" data-name="Popular 1" data-price="50">Agregar al carrito</button>
-    </div>
-    <div class="card">
-      <img src="img/popular2.jpg" alt="Popular 2">
+      <p class="price">S/ 50.00</p>
+      <div class="actions">
+        <button class="btn" data-action="add">Agregar al carrito</button>
+      </div>
+    </article>
+
+    <article class="card product-card"
+             data-id="pop2"
+             data-title="Popular 2"
+             data-price="45"
+             data-image="img/trabajo3.jpeg"
+             data-desc="Producto más vendido y recomendado.">
+      <img src="img/trabajo3.jpeg" alt="Popular 2">
       <h3>Popular 2</h3>
-      <p>$45.00</p>
-      <button class="btn add-to-cart" data-name="Popular 2" data-price="45">Agregar al carrito</button>
-    </div>
+      <p class="price">S/ 45.00</p>
+      <div class="actions">
+        <button class="btn" data-action="add">Agregar al carrito</button>
+      </div>
+    </article>
+
+    <article class="card product-card"
+             data-id="pop3"
+             data-title="Popular 3"
+             data-price="40"
+             data-image="img/trabajo4.jpeg"
+             data-desc="Producto más vendido y recomendado.">
+      <img src="img/trabajo4.jpeg" alt="Popular 3">
+      <h3>Popular 3</h3>
+      <p class="price">S/ 40.00</p>
+      <div class="actions">
+        <button class="btn" data-action="add">Agregar al carrito</button>
+      </div>
+    </article>
   </div>
 </section>
 
