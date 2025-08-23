@@ -485,3 +485,31 @@ header .nav a {
     gap: 10px;
   }
 }
+
+.hero-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-img img {
+  max-width: 200px; /* Ajusta si quieres que el logo sea más pequeño */
+  height: auto;
+  margin-bottom: 10px; /* Espacio entre el logo y el botón */
+}
+
+.hero-img .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ff6600; /* Color del botón, cámbialo a tu gusto */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.hero-img .btn:hover {
+  background: #e65500; /* Color al pasar el mouse */
+}
