@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galería de Imágenes</title>
+  <link rel="icon" href="img/logo-tienda.png" type="image/png">
+  <!-- Reutiliza tus estilos -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header (mismo estilo) -->
+  <header>
+    <div class="logo">
+      <img src="img/logo-tienda.png" alt="Logo Tienda">
+    </div>
+    <nav class="nav">
+      <!-- OJO: desde esta página, los enlaces vuelven a index.html -->
+      <a href="index.html#inicio">Inicio</a>
+      <a href="index.html#productos">Productos</a>
+      <a href="index.html#contacto">Contacto</a>
+      <a href="galeria.html" class="active">Galería</a>
+    </nav>
+    <div class="hamburger" id="hamburger-btn">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- Contenido -->
+  <section class="section galeria" id="galeria" style="margin-top: 100px;">
+    <h2>Galería</h2>
+    <p>Explora nuestra colección de imágenes.</p>
+
+    <div class="gallery-grid">
+      <!-- Usa tus imágenes reales de la carpeta /img -->
+      <figure class="gallery-item">
+        <img loading="lazy" src="img/trabajo.jpeg" alt="Imagen 1" data-full="img/trabajo.jpeg">
+        <figcaption class="gallery-caption">Imagen 1</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img loading="lazy" src="img/trabajo2.jpeg" alt="Imagen 2" data-full="img/trabajo2.jpeg">
+        <figcaption class="gallery-caption">Imagen 2</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img loading="lazy" src="img/trabajo3.jpeg" alt="Imagen 3" data-full="img/trabajo3.jpeg">
+        <figcaption class="gallery-caption">Imagen 3</figcaption>
+      </figure>
+
+      <figure class="gallery-item">
+        <img loading="lazy" src="img/trabajo4.jpeg" alt="Imagen 4" data-full="img/trabajo4.jpeg">
+        <figcaption class="gallery-caption">Imagen 4</figcaption>
+      </figure>
+    </div>
+
+    <div style="margin-top:24px;">
+      <a href="index.html#inicio" class="btn">← Volver al inicio</a>
+    </div>
+  </section>
+
+  <!-- Lightbox (visor en pantalla completa) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox__close" aria-label="Cerrar">&times;</button>
+    <img id="lightbox-img" alt="Vista ampliada">
+    <p id="lightbox-cap" class="lightbox__caption"></p>
+  </div>
+
+  <!-- Script menú hamburguesa -->
+  <script>
+    const hamburger = document.getElementById('hamburger-btn');
+    const nav = document.querySelector('.nav');
+    if (hamburger && nav) {
+      hamburger.addEventListener('click', () => nav.classList.toggle('active'));
+      document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => nav.classList.remove('active')));
+    }
+  </script>
+
+  <!-- Script del lightbox -->
+  <script>
+    (function(){
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+      const lbCap = document.getElementById('lightbox-cap');
+      const closeBtn = lb.querySelector('.lightbox__close');
+
+      document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', () => {
+          lbImg.src = img.dataset.full || img.src;
+          lbCap.textContent = img.closest('figure')?.querySelector('.gallery-caption')?.textContent || img.alt || '';
+          lb.classList.add('show');
+          lb.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      const close = () => {
+        lb.classList.remove('show');
+        lb.setAttribute('aria-hidden', 'true');
+        lbImg.src = '';
+        document.body.style.overflow = '';
+      };
+
+      closeBtn.addEventListener('click', close);
+      lb.addEventListener('click', (e) => {
+        if (e.target === lb) close();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lb.classList.contains('show')) close();
+      });
+    })();
+  </script>
+</body>
+</html>
