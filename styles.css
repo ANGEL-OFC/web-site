@@ -477,3 +477,11 @@ header .nav a {
   white-space: nowrap;  /* Mantiene cada enlace en una sola línea */
   font-size: 1rem;      /* Ajusta el tamaño si es muy grande */
 }
+
+@media (max-width: 768px) {
+  header nav, header .nav {
+    flex-direction: column; /* Menú en columna cuando no hay espacio */
+    align-items: center;
+    gap: 10px;
+  }
+}
