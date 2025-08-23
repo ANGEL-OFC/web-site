@@ -461,3 +461,19 @@ a.btn:hover, .btn:hover {
   backdrop-filter: blur(4px);
 }
 .lightbox__close:hover { background: rgba(255,255,255,.22); }
+
+header nav, 
+header .nav {
+  display: flex;
+  flex-wrap: wrap;      /* Permite que las opciones pasen a la siguiente línea si no caben */
+  justify-content: center; /* Centra horizontalmente */
+  gap: 20px;            /* Espaciado entre los enlaces */
+  max-width: 100%;      /* Asegura que no se corte */
+  overflow: visible;    /* Muestra el contenido completo */
+}
+
+header nav a, 
+header .nav a {
+  white-space: nowrap;  /* Mantiene cada enlace en una sola línea */
+  font-size: 1rem;      /* Ajusta el tamaño si es muy grande */
+}
