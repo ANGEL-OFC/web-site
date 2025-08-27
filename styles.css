@@ -513,3 +513,47 @@ header .nav a {
 .hero-img .btn:hover {
   background: #e65500; /* Color al pasar el mouse */
 }
+
+/* Estilos base del menú */
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+}
+
+/* --- Versión Móvil --- */
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* Ocultar menú por defecto */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-radius: 10px;
+  }
+
+  .nav.active {
+    display: flex; /* Mostrar cuando se activa con el JS */
+  }
+
+  .hamburger {
+    display: flex; /* Mostrar botón hamburguesa en móvil */
+  }
+}
