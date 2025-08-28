@@ -115,15 +115,19 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; /* Ocupa toda la altura */
-    background: #fff; /* Color de fondo (puedes cambiarlo) */
-    display: none; /* Oculto por defecto */
+    height: 100vh;
+    background: rgba(0,0,0,0.9); /* Fondo negro semi-transparente */
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 999; /* Encima de todo */
+    z-index: 999;
   }
 
+  .nav a {
+    color: #fff !important; /* Asegura que los links se vean */
+  }
+}
   /* Cuando está activo (clic en hamburguesa), se muestra */
   .nav.active {
     display: flex;
