@@ -557,3 +557,20 @@ header .nav a {
     display: flex; /* Mostrar botón hamburguesa en móvil */
   }
 }
+
+/* Ocultar menú por defecto en móvil */
+.nav {
+  display: none;
+}
+
+/* Mostrar cuando esté activo */
+.nav.active {
+  display: flex; /* o block, según tu diseño */
+}
+
+/* En pantallas grandes (PC) siempre mostrar el menú */
+@media (min-width: 769px) {
+  .nav {
+    display: flex !important;
+  }
+}
