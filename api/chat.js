@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   }
 
   if (!process.env.OPENAI_API_KEY) {
-    return res.status(500).json({ error: "No hay API KEY configurada" });
+    return res.status(500).json({ error: "No hay API KEY configurada en Vercel" });
   }
 
   try {
@@ -34,6 +34,6 @@ export default async function handler(req, res) {
     });
   } catch (error) {
     console.error("Error servidor:", error);
-    return res.status(500).json({ error: "Error interno en el servidor" });
+    return res.status(500).json({ error: "Error interno en la función" });
   }
 }
