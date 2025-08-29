@@ -10,6 +10,8 @@ export default async function handler(req, res) {
   try {
     const { message } = req.body;
 
+    console.log("Mensaje recibido:", message); // <-- Agrega esta línea
+
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
