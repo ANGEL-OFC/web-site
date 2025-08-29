@@ -226,6 +226,107 @@
   </div>
 </section>
 
+<!-- 🔹 Chatbot -->
+<div id="chat">
+  <div id="messages"></div>
+  <div id="input-area">
+    <input type="text" id="msg" placeholder="Escribe un mensaje...">
+    <button onclick="enviar()">Enviar</button>
+  </div>
+</div>
+
+<style>
+  #chat {
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+  }
+  #messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+  }
+  .msg {
+    margin: 5px 0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word;
+  }
+  .user {
+    background: #0078ff;
+    color: white;
+    align-self: flex-end;
+  }
+  .bot {
+    background: #eee;
+    align-self: flex-start;
+  }
+  #input-area {
+    display: flex;
+    border-top: 1px solid #ddd;
+  }
+  #msg {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+  }
+  button {
+    border: none;
+    background: #0078ff;
+    color: white;
+    padding: 0 20px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #005bb5;
+  }
+</style>
+
+<script>
+  function addMessage(text, sender) {
+    const div = document.createElement("div");
+    div.classList.add("msg", sender);
+    div.textContent = text;
+    document.getElementById("messages").appendChild(div);
+    document.getElementById("messages").scrollTop =
+      document.getElementById("messages").scrollHeight;
+  }
+
+  function enviar() {
+    const mensaje = document.getElementById("msg").value.trim();
+    if (!mensaje) return;
+
+    addMessage(mensaje, "user");
+    document.getElementById("msg").value = "";
+
+    fetch("https://web-site-delta-flax.vercel.app/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: mensaje })
+    })
+      .then(res => res.json())
+      .then(data => {
+        addMessage(data.reply || "No entendí la respuesta 😅", "bot");
+      })
+      .catch(err => {
+        console.error("Error:", err);
+        addMessage("Error al conectar con el servidor ❌", "bot");
+      });
+  }
+</script>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-contenedor">
