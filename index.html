@@ -253,52 +253,6 @@
       <p>&copy; 2025 Tienda Online - Todos los derechos reservados.</p>
     </div>
   </footer>
-
-<!-- Botón hamburguesa -->
-<button id="hamburger-btn">☰</button>
-
-<!-- Menú de navegación -->
-<nav class="nav">
-  <a href="#inicio">Inicio</a>
-  <a href="#productos">Productos</a>
-  <a href="#contacto">Contacto</a>
-</nav>
-
-<style>
-/* Estilo básico del menú */
-.nav {
-  display: none; /* Oculto por defecto */
-}
-.nav.active {
-  display: block; /* Visible cuando está activo */
-}
-
-/* Opcional: estilo para enlaces */
-.nav a {
-  display: block;
-  padding: 10px;
-  text-decoration: none;
-}
-</style>
-
-<script>
-  const hamburger = document.getElementById('hamburger-btn');
-  const nav = document.querySelector('.nav');
-  const links = document.querySelectorAll('.nav a');
-
-  // Abrir/cerrar menú al hacer clic en hamburguesa
-  hamburger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-
-  // Cerrar menú al hacer clic en cualquier enlace
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('active');
-    });
-  });
-</script>
-</script>
 <script src="script.js"></script>
 <script src="app.js"></script>
 </body>
