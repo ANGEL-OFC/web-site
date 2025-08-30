@@ -53,7 +53,8 @@ function renderCart() {
 // =======================
 // SONIDO CLICK
 // =======================
-const clickSound = new Audio("click.mp3"); // ponlo en la misma carpeta o ajusta ruta
+// 🔊 El archivo debe estar en: /sonido/click.mp3
+const clickSound = new Audio("sonido/click.mp3");
 
 // =======================
 // EFECTO FLY TO CART
@@ -96,7 +97,7 @@ function flyToCart(imgElement) {
 document.querySelectorAll(".btn.add-to-cart").forEach(button => {
   button.addEventListener("click", function() {
     // Sonido
-    clickSound.currentTime = 0; // reinicia para clics seguidos
+    clickSound.currentTime = 0; // reinicia en clics rápidos
     clickSound.play();
 
     // Imagen para animación
